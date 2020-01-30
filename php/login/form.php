@@ -24,12 +24,12 @@
         </div>
 
         <!--Grid row-->
-        <div class="row d-flex mb-4">
+        <div class="row d-flex mb-4 btnBar">
 
             <!--Grid column-->
             <div class="col-md-1 col-md-5 d-flex">
                 <div class="text-center">
-                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Log In</button>
+                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Login</button>
                 </div>
             </div>
             <!--Grid column-->

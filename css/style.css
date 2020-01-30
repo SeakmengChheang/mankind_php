@@ -1,7 +1,11 @@
 .btn {
-    border-radius: 15px;
+    border-radius: 7px;
 }
 
 .nav-item {
     align-self: center;
+}
+
+.btnBar {
+    float: right;
 }

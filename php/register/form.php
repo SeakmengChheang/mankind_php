@@ -24,7 +24,7 @@
         </div>
 
         <!--Grid row-->
-        <div class="row d-flex mb-4">
+        <div class="row d-flex mb-4 btnBar">
 
             <!--Grid column-->
             <div class="col-md-1 col-md-5 d-flex">
