@@ -1,0 +1,126 @@
+<style>
+    .nav-item {
+        padding: 10px;
+    }
+    
+    .nav-item:hover .nav-link {
+        color: #2ea3ad !important;
+    }
+    
+    figure {
+        display: flex;
+        align-items: center;
+    }
+    
+    .social-icons:hover .fab {
+        color: black;
+    }
+</style>
+
+<div class="navbar-menu contact-nav container-fluid border-bottom px-5 py-2">
+    <div class="row justify-content-between">
+        <div class="col-md-2 border-right">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Phnom Penh, Cambodia</span>
+        </div>
+        <div class="col-md-2 border-right">
+            <i class="fas fa-phone-volume"></i>
+            <span><a class="primaryColor" href="tel:+85512222111">+855 12 222 111</a></span>
+        </div>
+        <div class="col-md-2 border-right">
+            <i class="fas fa-fax"></i>
+            <span><a class="primaryColor" href="tel:+85523876222">+855 23 876 222</a></span>
+        </div>
+        <div class="col-md-2 ml-auto border-right">
+            <div class="float-md-right">
+                <a class="primaryColor social-icons px-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="primaryColor social-icons px-1" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="primaryColor social-icons px-1" href="#"><i class="fab fa-youtube"></i></a>
+                <a class="primaryColor social-icons px-1" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="primaryColor social-icons px-1" href="#"><i class="fab fa-vimeo-v"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light white sticky-top px-5 align-middle" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-link" href="/">
+            <figure>
+                <img class="center" src="img/logo.png" width="75">
+                <figcaption>
+                    <h4 class="primaryColor">Mankind Medicare</h4>
+                    <small class="secondaryColor">Your health is our concerns</small>
+                </figcaption>
+            </figure>
+        </a>
+    </div>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler toggler-example tempting-azure-gradient z-depth-1" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav" style="height: 100%;">
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+
+            <!-- Dropdown
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Blog
+              </a>
+                <div class="dropdown-menu dropdown-menu-inline" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Illness</a>
+                    <a class="dropdown-item" href="#">Cancer</a>
+                    <a class="dropdown-item" href="#">Disorder</a>
+                </div>
+            </li> -->
+
+            <li class="nav-item">
+                <a class="nav-link" href="doctors.php">Doctors</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="make_appointment.php">Make Appointment</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="blog.php">Blog</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="contact_us.php">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="about_us.php">About Us</a>
+            </li>
+
+
+
+            <li class="nav-item ">
+                <!-- <form action="register.php">
+                    <button type="submit" class="btn waves-effect">
+                        Register
+                    </button>
+                </form> -->
+                <a class="nav-link" href="register.php">Register</a>
+            </li>
+
+            <li class="nav-item">
+                <form action="login.php">
+                    <button type="submit" class="btn blue-gradient btn-round">
+                        Login
+                    </button>
+                </form>
+            </li>
+
+        </ul>
+        <!-- Links -->
+    </div>
+    <!-- Collapsible content -->
+</nav>
