@@ -9,7 +9,14 @@
 <body>
     <?php include('template/navbar.html') ?>
 
-    <h1>This is make appointment page</h1>
+    <div class="container-fluid">
+        <div class="col-md-6 m-auto p-5">
+			<?php 
+                $form_title = 'Contact Us';
+				include __DIR__.'/php/make_appointment/form.php';
+			?>
+        </div>
+    </div>
 
     <?php include ('template/footer.html') ?>
 </body>
