@@ -2,18 +2,27 @@
 <html lang="en">
 <head>
     <?php
-        define('TITLE', 'HOME');
+        define('TITLE', 'Register');
         include('template/header.php');
     ?>
+
+<link rel="stylesheet" href="css/form_with_background.css">
+    <style>
+        .bg-image {
+            background-image: url('img/register_bg.png');
+        }
+    </style>
 </head>
 <body>
     <?php include('template/navbar.html') ?>
 
-	<div class="container-fluid">
-        <div class="col-md-6 m-auto p-5">
-			<?php 
-				include __DIR__.'/php/register/form.php';
-			?>
+	<div class="dummy">
+        <div class="bg-image"></div>
+    
+        <div class="container-fluid bg-content">
+            <div class="col-md-5 m-auto p-5">
+                <?php include __DIR__.'/php/register/form.php'; ?>
+            </div>
         </div>
     </div>
 

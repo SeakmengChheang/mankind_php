@@ -1,19 +1,21 @@
-<div class="card">
+<!-- Card Narrower -->
+<div class="card card-cascade narrower">
 
-    <!--Header-->
-    <div class="header p-5 blue-gradient">
+  <!-- Card image -->
+  <div class="view view-cascade overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"
+      alt="Card image cap"> -->
+      <h3 class="p-5 peach-gradient text-white mb-0 text-center card-img-top text-bold" style="height: 150px;">Login</h3>
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
 
-        <div class="row d-flex justify-content-center">
-            <h3 class="white-text mb-3 pt-3 font-weight-bold">Log In</h3>
-        </div>
+  <!-- Card content -->
+  <div class="card-body card-body-cascade">
 
-    </div>
-    <!--Header-->
-
-    <div class="card-body mx-4">
-
-        <!--Body-->
-        <div class="md-form">
+    <!--Body-->
+    <div class="md-form">
             <input type="text" id="username" name="username" class="form-control">
             <label for="username">Username</label>
         </div>
@@ -29,13 +31,15 @@
             <!--Grid column-->
             <div class="col-md-1 col-md-5 d-flex">
                 <div class="text-center">
-                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Login</button>
+                    <button type="button" class="btn peach-gradient btn-rounded z-depth-1a waves-effect waves-light">Login</button>
                 </div>
             </div>
             <!--Grid column-->
 
         </div>
         <!--Grid row-->
-    </div>
+
+  </div>
 
 </div>
+<!-- Card Narrower -->

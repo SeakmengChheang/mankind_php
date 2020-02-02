@@ -2,6 +2,10 @@
     align-self: center;
 }
 
+.btn {
+    border-radius: 7px;
+}
+
 .btnBar {
     float: right;
 }

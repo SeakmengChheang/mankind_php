@@ -47,8 +47,7 @@
 
         <div class="col-lg-4 pr-5">
             <?php 
-                $form_title = 'Make an appointment today';
-                include 'php/contact_us/form.php';
+                include 'php/make_appointment/form.php';
             ?>
         </div>
     </div>

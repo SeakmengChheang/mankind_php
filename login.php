@@ -5,15 +5,28 @@
         define('TITLE', 'HOME');
         include('template/header.php');
     ?>
+
+    <link rel="stylesheet" href="css/form_with_background.css">
+    <style>
+        .bg-image {
+            background-image: url('img/login_bg.png');
+            height: 550px;
+        }
+    </style>
+
 </head>
 <body>
     <?php include('template/navbar.html') ?>
 
-    <div class="container-fluid">
-        <div class="col-md-6 m-auto p-5">
-			<?php 
-				include __DIR__.'/php/login/form.php';
-			?>
+    <div class="dummy">
+        <div class="bg-image"></div>
+
+        <div class="container-fluid bg-content justify-content-center">
+            <div class="col-md-5 m-auto p-5">
+                <?php 
+                    include __DIR__.'/php/login/form.php';
+                ?>
+            </div>
         </div>
     </div>
 
