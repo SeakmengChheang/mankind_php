@@ -1,19 +1,21 @@
-<div class="card">
+<!-- Card Narrower -->
+<div class="card card-cascade narrower">
 
-    <!--Header-->
-    <div class="header p-5 blue-gradient">
+  <!-- Card image -->
+  <div class="view view-cascade overlay">
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"
+      alt="Card image cap"> -->
+      <h3 class="p-5 blue-gradient text-white mb-0 text-center" style="height: 150px;">Contact Us</h3>
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
 
-        <div class="row d-flex justify-content-center">
-            <h3 class="white-text mb-3 pt-3 font-weight-bold"><?php echo $form_title; ?></h3>
-        </div>
+  <!-- Card content -->
+  <div class="card-body card-body-cascade">
 
-    </div>
-    <!--Header-->
-
-    <div class="card-body mx-4">
-
-        <!--Body-->
-        <div class="md-form">
+    <!--Body-->
+    <div class="md-form">
             <input type="text" id="Form-name3" class="form-control">
             <label for="Form-email3">Your name</label>
         </div>
@@ -39,13 +41,15 @@
             <!--Grid column-->
             <div class="col-md-1 col-md-5 d-flex">
                 <div class="text-center ">
-                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Send</button>
+                    <button type="button" class="btn blue-gradient z-depth-1a waves-effect waves-light">Send</button>
                 </div>
             </div>
             <!--Grid column-->
 
         </div>
         <!--Grid row-->
-    </div>
+
+  </div>
 
 </div>
+<!-- Card Narrower -->

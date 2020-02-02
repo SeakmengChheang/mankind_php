@@ -15,7 +15,6 @@
     <?php include 'php/home/sec_4.php'; ?>
 
     <?php 
-    
         for($i = 0; $i < 10; ++$i) {
             $title = $i + 1;
             include __DIR__.'/template/doctor_card.php';

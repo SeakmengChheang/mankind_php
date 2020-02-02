@@ -22,34 +22,36 @@
             <input type="text" id="Form-mail3" class="form-control">
             <label for="Form-pass3">Your email</label>
         </div>
-        
-        <div class="wrapper">
-        <label>
-<!--     <input data-provide="datepicker" required="required"> -->
-    <input type="text" class="dateselect" required="required"/>
-    <span>Date</span>
-  </label>
+
+        <div class="md-form">
+            <input type="date" name="doa" id="doa" class="form-control">
+            <label for="doa">Date Of Appointment</label>
         </div>
 
-        <label>Doctor</label> <br>
-        <select class="mdb-select">
-            <option value="" disabled>Choose option</option>
-            <option value="1" selected>Feedback</option>
-            <option value="2">Report a bug</option>
-            <option value="3">Feature request</option>
-            <option value="4">Feature request</option>
+        <div class="md-form">
+        <label class="mdb-main-label">Doctor</label>
+        <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..">
+            <option value="" disabled selected>Choose your doctor</option>
+            <option value="1">USA</option>
+            <option value="2">Germany</option>
+            <option value="3">France</option>
+            <option value="3">Poland</option>
+            <option value="3">Japan</option>
         </select>
+        </div>
 
-<!-- <div class="text-center float-right">
-                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Send</button>
-                </div> -->
+        <!-- <div class="text-center float-right">
+                            <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Send</button>
+                        </div> -->
 
         <!--Grid row-->
         <div class="row d-flex mb-4 btnBar">
             <!--Grid column-->
             <div class="col-md-1 col-md-5 d-flex">
                 <div class="text-center ">
-                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Send</button>
+                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">
+                        Send
+                    </button>
                 </div>
             </div>
             <!--Grid column-->
