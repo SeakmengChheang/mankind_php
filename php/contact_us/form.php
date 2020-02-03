@@ -5,7 +5,7 @@
   <div class="view view-cascade overlay">
     <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"
       alt="Card image cap"> -->
-      <h3 class="p-5 blue-gradient text-white mb-0 text-center" style="height: 150px;">Contact Us</h3>
+      <h3 class="p-5 blue-gradient text-white mb-0 text-center card-img-top" style="height: 150px;">Contact Us</h3>
     <a>
       <div class="mask rgba-white-slight"></div>
     </a>
@@ -31,10 +31,6 @@
             <div class="form-group">
             </div>
         </div>
-
-<!-- <div class="text-center float-right">
-                    <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Send</button>
-                </div> -->
 
         <!--Grid row-->
         <div class="row d-flex mb-4 btnBar">
