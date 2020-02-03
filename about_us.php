@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php
-        define('TITLE', 'HOME');
+        define('TITLE', 'About Us');
         include('template/header.php');
     ?>
 </head>

@@ -3,35 +3,31 @@
 <head>
     <?php
         require_once '../config.php';
-        define('TITLE', 'HOME');
+
+        define('TITLE', 'Feedback');
         include ROOT_PATH . '/template/header.php';
     ?>
 
     <link rel="stylesheet" href="css/form_with_background.css">
     <style>
         .bg-image {
-            background-image: url('../img/login_bg.png');
-            height: 550px;
+            background-image: url('../img/contact_us_bg.png');
         }
     </style>
-    
-
 </head>
 <body>
     <?php include ROOT_PATH . '/template/navbar.html' ?>
 
-    <div class="dummy">
+    <div class='dummy'>
         <div class="bg-image"></div>
 
-        <div class="container-fluid bg-content justify-content-center">
+        <div class="container-fluid bg-content">
             <div class="col-md-5 m-auto p-5">
-                <?php 
-                    include ROOT_PATH .'/php/login/form.php';
-                ?>
+                <?php include ROOT_PATH . '/php/contact_us/contact_us_form.php'; ?>
             </div>
         </div>
     </div>
-
+    
     <?php include ROOT_PATH . '/template/footer.html' ?>
 </body>
 </html>
