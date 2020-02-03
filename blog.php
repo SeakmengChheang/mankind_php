@@ -11,11 +11,11 @@
 
 <div class="container-fluid p-3 row">
     <div class='col-12'>
-        <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center" role="tablist">
+        <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center" role="tablist"> -->
             <!--
                 color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
             -->
-            <li class="nav-item col-md-1 m-3">
+             <li class="nav-item col-md-1 m-3">
                 <a class="nav-link active show" href="#illness" role="tab" data-toggle="tab" aria-selected="true">
                     <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> Illness
                 </a>
