@@ -9,12 +9,12 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="<?php echo ROOT_PATH . "./css/bootstrap.min.css"; ?>" >
-<link rel="stylesheet" href="<?php echo ROOT_PATH ?>/css/mdb.min.css">
-<link rel="stylesheet" href="<?php echo ROOT_PATH ?>/css/mdb.lite.min.css">
-<link rel="stylesheet" href="<?php echo ROOT_PATH ?>/css/style.css">
-<link rel="stylesheet" href="<?php echo ROOT_PATH ?>/css/custom.css">
+<link rel="stylesheet" href=<?php echo ROOT_PATH . "/css/bootstrap.min.css" ?> >
+<link rel="stylesheet" href=<?php echo ROOT_PATH . "/css/mdb.min.css" ?>>
+<link rel="stylesheet" href=<?php echo ROOT_PATH . "/css/mdb.lite.min.css" ?>>
+<link rel="stylesheet" href=<?php echo ROOT_PATH . "/css/style.css" ?>>
+<link rel="stylesheet" href=<?php echo ROOT_PATH . "/css/custom.css" ?>>
 
 <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 
-<link rel="shortcut icon" type="image/png" href="<?php echo ROOT_PATH ?>/img/logo.png"/>
+<!-- <link rel="shortcut icon" type="image/png" href="<?php echo ROOT_PATH ?>/img/logo.png"/> -->
