@@ -17,4 +17,4 @@
 
 <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 
-<link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL ?>/img/logo.png"/>
+<link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL."/img/logo.png" ?>"/>

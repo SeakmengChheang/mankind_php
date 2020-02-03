@@ -5,6 +5,11 @@
 
 <!-- Retrieve all posts from database  -->
 <?php $posts = getPublishedPosts(); ?>
+        <style>
+            img.img-fluid {
+            height:  220px;
+            }  
+        </style>
         <!-- Intro -->
         <div class="card card-intro blue-gradient mb-4">
 
@@ -56,18 +61,24 @@
                 <!--Grid row-->
                   
                 <div class="row wow fadeIn">
+                <?php $cnt = 0; ?>
+               
                 <?php foreach ($posts as $post): ?> 
                     <!--Grid column-->
+                   
                     <div class="col-lg-4 col-md-12 mb-4">
+                      
                         <!--Featured image-->
-                        <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
- 
-                            <img src="<?php echo BASE_URL . 'img/' . $post['image']; ?>" class="img-fluid" alt="">
-                            <a>
-                                <div class="mask"></div>
-                            </a>
+                     
+                       <div class="img">
+                            <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
+    
+                                <img src="<?php echo BASE_URL . 'img/nutrition/' . $post['image']; ?>" class="img-fluid" alt="">
+                                <a>
+                                    <div class="mask"></div>
+                                </a>
+                            </div>
                         </div>
-
                         <!--Excerpt-->
                         <a href="" class="pink-text">
                             <h6 class="mb-3 mt-4">
@@ -80,62 +91,80 @@
                         </h4>
                         <p>by
                             <a class="font-weight-bold dark-grey-text">Billy Forester</a>, <?php echo date("F j, Y ", strtotime($post["created_at"])); ?></p>
-                        <p class="grey-text"><?php echo $post['body']; ?></p>
-                        <a class="btn btn-info btn-rounded btn-md">Read more</a>
+                        <p class="grey-text" ><?php echo $post['body']; ?></p>
+                        <a class="btn btn-info btn-rounded btn-md change-btn">Read more</a>
+                    
+                 
                     </div>
+                    
                     <?php endforeach ?>
+                 
                     <!--Grid column-->   
                 </div>
                 
                 <!--Grid row-->
-
-
+                
                 <!--Pagination -->
                 <nav class="d-flex justify-content-center my-4 wow fadeIn">
                     <ul class="pagination pagination-circle pg-info mb-0">
 
                         <!--First-->
-                        <li class="page-item disabled">
+                        <!-- <li class="page-item disabled">
                             <a class="page-link">First</a>
-                        </li>
+                        </li> -->
 
                         <!--Arrow left-->
-                        <li class="page-item disabled">
+                        <!-- <li class="page-item disabled">
                             <a class="page-link" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                        </li>
+                        </li> -->
 
                         <!--Numbers-->
-                        <li class="page-item active">
-                            <a class="page-link" href="blog.php">1</a>
+                        <li class="page-item active" id="1">
+                            <a class="page-link" href="<?php  { echo "blog.php?pageno=".(1); } ?>">1</a>
+                         </li>
+                        <li class="page-item" id="2">
+                            <a class="page-link" href="<?php  { echo "blog.php?pageno=".(2); } ?>">2</a>
+                            </li>
+                        <li class="page-item" id="3">
+                            <a class="page-link" href="<?php  { echo "blog.php?pageno=".(3); } ?>">3</a>
+                            </li>
+                        <li class="page-item" id="5">
+                            <a class="page-link"  href="<?php  { echo "blog.php?pageno=".(4); } ?>">4</a>
+                            </li>
+                        <li class="page-item" id="6">
+                            <a class="page-link"  href="<?php  { echo "blog.php?pageno=".(5); } ?>">5</a>
                         </li>
-                        <li class="page-item">
-                            <a class="page-link" href="blog.php">2</a>
+                        <li class="page-item" id="5">
+                            <a class="page-link"  href="<?php  { echo "blog.php?pageno=".(6); } ?>">6</a>
+                            </li>
+                        <li class="page-item" id="6">
+                            <a class="page-link"  href="<?php  { echo "blog.php?pageno=".(7); } ?>">7</a>
                         </li>
-                        <li class="page-item">
-                            <a class="page-link">3</a>
+                        <li class="page-item" id="5">
+                            <a class="page-link"  href="<?php  { echo "blog.php?pageno=".(8); } ?>">8</a>
+                            </li>
+                        <li class="page-item" id="6">
+                            <a class="page-link"  href="<?php  { echo "blog.php?pageno=".(9); } ?>">9</a>
                         </li>
-                        <li class="page-item">
-                            <a class="page-link">4</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link">5</a>
-                        </li>
-
+                        <li class="page-item" id="5">
+                            <a class="page-link"  href="<?php  { echo "blog.php?pageno=".(10); } ?>">10</a>
+                            </li>
+                      
                         <!--Arrow right-->
-                        <li class="page-item">
+                        <!-- <li class="page-item">
                             <a class="page-link" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Next</span>
                             </a>
-                        </li>
+                        </li> -->
 
                         <!--Last-->
-                        <li class="page-item">
+                        <!-- <li class="page-item">
                             <a class="page-link">Last</a>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </nav>
@@ -146,5 +175,4 @@
         </div>
     </main>
     <!--Main layout-->
-
-                
+        

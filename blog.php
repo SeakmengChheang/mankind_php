@@ -11,7 +11,7 @@
 
 <div class="container-fluid p-3 row">
     <div class='col-12'>
-        <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center" role="tablist"> -->
+        <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center" role="tablist">
             <!--
                 color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
             -->
