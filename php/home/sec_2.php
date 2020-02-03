@@ -47,7 +47,7 @@
 
         <div class="col-lg-4 pr-5">
             <?php 
-                include 'php/make_appointment/form.php';
+                include $_SERVER['DOCUMENT_ROOT'] . '/php/make_appointment/make_appointment_form.php';
             ?>
         </div>
     </div>
