@@ -5,6 +5,11 @@
         define('TITLE', 'HOME');
         include('template/header.php');
     ?>
+    <style>
+        .jarallax {
+            min-height: 200px;
+        }
+    </style>
 </head>
 <body>
     <?php include('template/navbar.html') ?>
@@ -14,12 +19,8 @@
     <?php include 'php/home/sec_3.php'; ?>
     <?php include 'php/home/sec_4.php'; ?>
 
-    <?php 
-        for($i = 0; $i < 10; ++$i) {
-            $title = $i + 1;
-            include __DIR__.'/template/doctor_card.php';
-        }
-    ?>
+    <?php include 'php/home/sec_5.php'; ?>
+
 
     <?php include ('template/footer.html') ?>
 </body>

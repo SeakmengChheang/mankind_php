@@ -39,11 +39,7 @@
             <option value="3">Japan</option>
         </select>
         </div>
-
-        <!-- <div class="text-center float-right">
-                            <button type="button" class="btn blue-gradient btn-rounded z-depth-1a waves-effect waves-light">Send</button>
-                        </div> -->
-
+        
         <!--Grid row-->
         <div class="row d-flex mb-4 btnBar">
             <!--Grid column-->
