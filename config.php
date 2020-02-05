@@ -1,7 +1,7 @@
 <?php 
 	
 	// connect to database
-	$conn = mysqli_connect("127.0.0.1", "root", "root", "mankind");
+	$conn = mysqli_connect("127.0.0.1", "root", "", "mankind_php");
 
 	if (!$conn) {
 		die("Error connecting to database: " . mysqli_connect_error());

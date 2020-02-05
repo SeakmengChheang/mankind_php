@@ -28,12 +28,13 @@
     include('template/header.php');
     ?>
     <style>
+          
             img.img-fluid {
-            height: 220px;
-            background-size: 100% 100%;
             width: 100%;
-            background-repeat: no-repeat;
-            }  
+            height: 230px;
+            object-fit: cover;
+           
+            }
             
         </style>      
 </head>
@@ -54,7 +55,8 @@
             <?php foreach($topics as $topic) : ?>
                 <li class="nav-item col-md-1 m-3">
                 <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>" id="topic_<?php echo $topic['id'] ?>">
-                    <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> <span style="overflow: hidden;"><?php echo $topic['topic'] ?></span>
+                    <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> <span style=" white-space: nowrap; overflow: hidden;
+                    text-overflow: clip; "><?php echo $topic['topic'] ?></span>
                 </a>
                 </li>
             <?php endforeach; ?>
@@ -79,7 +81,6 @@
                      
                        <div class="img">
                             <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
-    
                                 <img src="<?php echo 'img/foods/' . $food['photo_url']. '.jpg'; ?>" class="img-fluid" alt="">
                                 <a>
                                     <div class="mask"></div>
