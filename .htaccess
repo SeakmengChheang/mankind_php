@@ -1,0 +1,11 @@
+php_value include_path "/Users/raymond/Desktop/www/mankind_php"
+
+RewriteEngine On
+RewriteBase /
+
+#remove html file extension 
+#https://example.com/file.html will become https://example.com/file
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
