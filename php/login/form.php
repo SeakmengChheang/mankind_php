@@ -21,7 +21,7 @@
         </div>
 
         <div class="md-form">
-            <input type="text" id="password" name="password" class="form-control">
+            <input type="password" id="password" name="password" class="form-control">
             <label for="password">Password</label>
         </div>
 
