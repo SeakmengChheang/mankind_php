@@ -1,3 +1,10 @@
+<?php
+    require_once 'config.php';
+
+    if(isset($_GET['topic']))
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,13 +42,7 @@
     <div class='col-12'>
         <div class="tab-content">
             <div class="tab-pane active show" id="illness">
-                <?php include __DIR__ . '/php/blog/illness.php'; ?>
-            </div>
-            <div class="tab-pane" id="cancer">
-                <?php include __DIR__ . '/php/blog/cancer.php'; ?>
-            </div>
-            <div class="tab-pane" id="disorder">
-                <?php include __DIR__ . '/php/blog/disorder.php'; ?>
+                <?php include __DIR__ . '/php/blog/index.php'; ?>
             </div>
         </div>
     </div>
