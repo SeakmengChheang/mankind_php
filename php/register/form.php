@@ -27,12 +27,12 @@
         </div>
 
         <div class="md-form">
-            <input type="text" id="password" name="password" class="form-control">
+            <input type="password" id="password" name="password" class="form-control">
             <label for="password">Password</label>
         </div>
 
         <div class="md-form">
-            <input type="text" id="password_confirmation" name="password_confirmation" class="form-control">
+            <input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
             <label for="password_confirmation">Password Confirmation</label>
         </div>
 

@@ -8,6 +8,7 @@
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="./css/bootstrap.min.css" >
 <link rel="stylesheet" href="./css/mdb.min.css" >
+<<<<<<< HEAD
 <link rel="stylesheet" href="/css/mdb.lite.min.css" >
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/custom.css">
@@ -15,3 +16,12 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 
 <link rel="shortcut icon" type="image/png" href="/img/logo.png" />
+=======
+<link rel="stylesheet" href="./css/mdb.lite.min.css" >
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/custom.css" >
+
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+
+<link rel="shortcut icon" type="image/png" href="./img/logo.png"/>
+>>>>>>> 6c50a2a66bc6d38405d7b1f9d33b59914cb21671

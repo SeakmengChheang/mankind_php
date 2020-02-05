@@ -20,9 +20,7 @@
     <?php include './php/home/sec_2.php'; ?>
     <?php include './php/home/sec_3.php'; ?>
     <?php include './php/home/sec_4.php'; ?>
-
     <?php include './php/home/sec_5.php'; ?>
-
 
     <?php include './template/footer.html' ?>
 </body>
