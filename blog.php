@@ -1,17 +1,41 @@
 <?php
     require_once 'config.php';
 
-    if(isset($_GET['topic']))
+    if(isset($_GET['topic'])) {
+        $topic = htmlspecialchars($_GET['topic']);
+        if($topic < 1 && $topic > 5)
+            die('error');
 
+        $sql = "SELECT * FROM blogs WHERE ht_id = $topic";
+    } else {
+        $sql = "SELECT * FROM blogs";
+    }
+    if(isset($_GET['pageno']))
+        $page_no = $_GET['pageno'];
+    else $page_no = 1;
+    $from = $page_no * 9 - 8;
+    $sql .= " LIMIT $from, 9;";
+
+    $res = mysqli_query($conn, $sql);
+    $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 ?>
 
 <!doctype html>
 <html lang="en">
 <head>
     <?php
-    define('TITLE', 'HOME');
+    define('TITLE', 'Blog');
     include('template/header.php');
     ?>
+    <style>
+            img.img-fluid {
+            height: 220px;
+            background-size: 100% 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            }  
+            
+        </style>      
 </head>
 <body>
 <?php include('template/navbar.html') ?>
@@ -22,31 +46,87 @@
             <!--
                 color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
             -->
-             <li class="nav-item col-md-1 m-3">
-                <a class="nav-link active show" href="#illness" role="tab" data-toggle="tab" aria-selected="true">
-                    <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> Illness
+            <?php 
+                $sql = "SELECT * FROM health_topics;";
+                $res = mysqli_query($conn, $sql);
+                $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
+            ?>
+            <?php foreach($topics as $topic) : ?>
+                <li class="nav-item col-md-1 m-3">
+                <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>" id="topic_<?php echo $topic['id'] ?>">
+                    <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> <span style="overflow: hidden;"><?php echo $topic['topic'] ?></span>
                 </a>
-            </li>
-            <li class="nav-item col-md-1 m-3">
-                <a class="nav-link" href="#cancer" role="tab" data-toggle="tab" aria-selected="false">
-                    <i class="fab fa-battle-net"></i> Cancer
-                </a>
-            </li>
-            <li class="nav-item col-md-1 m-3">
-                <a class="nav-link" href="#disorder" role="tab" data-toggle="tab" aria-selected="false">
-                    <i class="fas fa-angry"></i> Disorder
-                </a>
-            </li>
+                </li>
+            <?php endforeach; ?>
         </ul>
     </div>
     <div class='col-12'>
-        <div class="tab-content">
+        <!-- <div class="tab-content">
             <div class="tab-pane active show" id="illness">
-                <?php include __DIR__ . '/php/blog/index.php'; ?>
+            </div>
+            <div class="tab-pane show" id="cancer">
+                <li>Hello</li>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="row wow fadeIn">
+        <?php foreach ($foods as $food): ?> 
+                    <!--Grid column-->
+                   
+                    <div class="col-lg-4 col-md-12 mb-4">
+                      
+                        <!--Featured image-->
+                     
+                       <div class="img">
+                            <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
+    
+                                <img src="<?php echo 'img/foods/' . $food['photo_url']. '.jpg'; ?>" class="img-fluid" alt="">
+                                <a>
+                                    <div class="mask"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Excerpt-->
+                        <a href="" class="pink-text">
+                            <h6 class="mb-3 mt-4">
+                                <i class="fa fa-bolt"></i>
+                                <strong><?php echo $food['slug']; ?></strong>
+                            </h6>
+                        </a>
+                        <h4 class="mb-3 font-weight-bold dark-grey-text">
+                            <strong><?php echo $food['title'] ?></strong>
+                        </h4>
+                        <p class="grey-text" ><?php echo $food['body']; ?></p>
+                        <a class="btn btn-info btn-rounded btn-md change-btn">Read more</a>
+                    </div>
+                    
+                    <?php endforeach ?>
             </div>
         </div>
     </div>
 </div>
+
+<!--Pagination -->
+<nav class="d-flex justify-content-center my-4 wow fadeIn">
+    <ul class="pagination pagination-circle pg-info mb-0">
+
+        <?php for($i = 1; $i <= 10; ++$i) : ?>
+            <li class="page-item" id="page_<?php echo $i ?>">
+                <a class="page-link" href="<?php echo $_SERVER['REQUEST_URI'] . "&pageno=$i" ?>"><?php echo $i ?></a>
+            </li>
+        <?php endfor; ?>
+    </ul>
+</nav>
+
+<script>
+    var curr_page = "<?php echo htmlspecialchars($_GET['pageno'] ?? 1) ?>";
+    var a = document.getElementById('page_' + curr_page);
+    a.classList.add("active");
+
+    var curr_topic = "<?php echo htmlspecialchars($_GET['topic'] ?? 1) ?>";
+    a = document.getElementById('topic_' + curr_topic);
+    a.classList.add("active");
+</script>
 
 <?php include('template/footer.html') ?>
 </body>

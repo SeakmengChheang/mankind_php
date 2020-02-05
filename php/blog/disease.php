@@ -1,7 +1,7 @@
-<?php require_once('../../config.php') ?>
+<?php require_once('config.php') ?>
 <!-- config.php should be here as the first include  -->
 
-<?php require_once('../includes/public_functions.php') ?>
+<?php require_once(ROOT_PATH.'/includes/public_functions.php') ?>
 
 <!-- Retrieve all posts from database  -->
 <?php $foods = getDiseasePosts(); ?>
