@@ -20,12 +20,14 @@
 
 <!doctype html>
 <html lang="en">
+
 <head>
-    <?php
-        define('TITLE', 'HOME');
-        include('template/header.php');
-    ?>
+  <?php
+  define('TITLE', 'HOME');
+  include('template/header.php');
+  ?>
 </head>
+
 <body>
     <?php include('template/navbar.html') ?>
     
@@ -104,5 +106,5 @@
     
     <?php include ('template/footer.html') ?>
 </body>
-</html>
 
+</html>
