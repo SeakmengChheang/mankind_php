@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <?php
-        define('TITLE', 'HOME');
-        include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
+    define('TITLE', 'HOME');
+    include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
     ?>
     <style>
         .jarallax {
@@ -11,9 +12,10 @@
         }
     </style>
 </head>
+
 <body>
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/template/navbar.html') ?>
-    
+
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_1.php'; ?>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_2.php'; ?>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_3.php'; ?>
@@ -24,5 +26,5 @@
 
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/template/footer.html' ?>
 </body>
-</html>
 
+</html>

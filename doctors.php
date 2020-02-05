@@ -9,14 +9,6 @@
 <body>
     <?php include('template/navbar.html') ?>
 
-<<<<<<< HEAD
-    <?php 
-        for($i = 0; $i < 10; ++$i) {
-            $title = $i + 1;
-            include __DIR__.'/template/doctor_card.php';
-        }
-    ?>
-=======
     <div class="row justify-content-center">
     <!-- Card Wider -->
 <div class="card card-cascade wider col-3 m-5">
@@ -118,7 +110,6 @@
 <!-- Card Regular -->
 
     </div>
->>>>>>> 62fe4eade54132a4f1a92d5e43bc1f8b2570bc6b
 
     <?php include ('template/footer.html') ?>
 </body>
