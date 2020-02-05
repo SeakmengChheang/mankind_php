@@ -4,7 +4,7 @@
 <head>
     <?php
     define('TITLE', 'HOME');
-    include($_SERVER['DOCUMENT_ROOT'] . '/template/header.php');
+    include('./template/header.php');
     ?>
     <style>
         .jarallax {
@@ -14,17 +14,17 @@
 </head>
 
 <body>
-    <?php include($_SERVER['DOCUMENT_ROOT'] . '/template/navbar.html') ?>
+    <?php include("./template/navbar.html") ?>
 
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_1.php'; ?>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_2.php'; ?>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_3.php'; ?>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_4.php'; ?>
+    <?php include  './php/home/sec_1.php'; ?>
+    <?php include './php/home/sec_2.php'; ?>
+    <?php include './php/home/sec_3.php'; ?>
+    <?php include './php/home/sec_4.php'; ?>
 
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/php/home/sec_5.php'; ?>
+    <?php include './php/home/sec_5.php'; ?>
 
 
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/template/footer.html' ?>
+    <?php include './template/footer.html' ?>
 </body>
 
 </html>

@@ -1,13 +1,12 @@
-<?php 
-	
-	// connect to database
-	$conn = mysqli_connect("127.0.0.1", "root", "root", "mankind");
+<?php
 
-	if (!$conn) {
-		die("Error connecting to database: " . mysqli_connect_error());
-	}
-	
-	// define global constants
-	define ('ROOT_PATH', realpath(dirname(__FILE__)));
-	define('BASE_URL', 'http://127.0.0.1/');
-?>
+// connect to database
+$conn = mysqli_connect("127.0.0.1", "root", "babyshark", "mankind");
+
+if (!$conn) {
+	die("Error connecting to database: " . mysqli_connect_error());
+}
+
+// define global constants
+define('ROOT_PATH', realpath(dirname(__FILE__)));
+define('BASE_URL', 'http://localhost/mankind_php/');

@@ -6,9 +6,9 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/mdb.min.css">
-<link rel="stylesheet" href="/css/mdb.lite.min.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css" >
+<link rel="stylesheet" href="./css/mdb.min.css" >
+<link rel="stylesheet" href="/css/mdb.lite.min.css" >
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/custom.css">
 
