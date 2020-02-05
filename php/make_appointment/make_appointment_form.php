@@ -32,11 +32,19 @@
             <label class="mdb-main-label" for="doctor">Doctor</label>
             <select class="mdb-select md-form colorful-select dropdown-primary" id="doctor" searchable="Search here..">
                 <option value="" disabled selected>Choose your doctor</option>
-                <option value="1">USA</option>
-                <option value="2">Germany</option>
-                <option value="3">France</option>
-                <option value="3">Poland</option>
-                <option value="3">Japan</option>
+                <?php 
+                    require_once 'config.php';
+
+                    $sql = "SELECT * FROM doctors";
+                    $res = mysqli_query($conn, $sql);
+                    $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
+                ?>
+
+                <?php foreach($doctors as $doc) :?>
+                    <option value="<?php echo $doc['id'] ?>">
+                        <?php echo $doc['full_name']; ?>
+                    </option>
+                <?php endforeach; ?>
             </select>
         </div>
         
