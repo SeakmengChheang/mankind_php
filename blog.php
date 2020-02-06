@@ -49,7 +49,7 @@
                 $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
             ?>
             <?php foreach($topics as $topic) : ?>
-                <li class="nav-item col-md-1 m-3" style="white-space: nowrap; overflow: hidden;">
+                <li class="nav-item col-lg-1 m-3" style="white-space: nowrap; overflow: hidden;">
                     <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>" id="topic_<?php echo $topic['id'] ?>">
                         <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> 
                         <span><?php echo $topic['topic'] ?></span>
