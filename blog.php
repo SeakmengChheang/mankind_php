@@ -1,6 +1,6 @@
 <?php
     require_once 'config.php';
-
+        
     if(isset($_GET['topic'])) {
         $topic = htmlspecialchars($_GET['topic']);
         if($topic < 1 && $topic > 5)
@@ -10,9 +10,8 @@
     } else {
         $sql = "SELECT * FROM blogs";
     }
-    if(isset($_GET['pageno']))
-        $page_no = $_GET['pageno'];
-    else $page_no = 1;
+    $page_no = $_GET['pageno'] ?? 1;
+
     $from = $page_no * 9 - 8;
     $sql .= " LIMIT $from, 9;";
 
@@ -28,15 +27,12 @@
     include('template/header.php');
     ?>
     <style>
-          
-            img.img-fluid {
+        img.img-fluid {
             width: 100%;
             height: 230px;
             object-fit: cover;
-           
-            }
-            
-        </style>      
+        }
+    </style>      
 </head>
 <body>
 <?php include('template/navbar.html') ?>
@@ -53,11 +49,11 @@
                 $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
             ?>
             <?php foreach($topics as $topic) : ?>
-                <li class="nav-item col-md-1 m-3">
-                <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>" id="topic_<?php echo $topic['id'] ?>">
-                    <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> <span style=" white-space: nowrap; overflow: hidden;
-                    text-overflow: clip; "><?php echo $topic['topic'] ?></span>
-                </a>
+                <li class="nav-item col-md-1 m-3" style="white-space: nowrap; overflow: hidden;">
+                    <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>" id="topic_<?php echo $topic['id'] ?>">
+                        <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> 
+                        <span><?php echo $topic['topic'] ?></span>
+                    </a>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -71,7 +67,10 @@
             </div>
         </div> -->
         <div class="container">
+        <h1 id="header"></h1>
+
             <div class="row wow fadeIn">
+
         <?php foreach ($foods as $food): ?> 
                     <!--Grid column-->
                    
@@ -127,6 +126,11 @@
     var curr_topic = "<?php echo htmlspecialchars($_GET['topic'] ?? 1) ?>";
     a = document.getElementById('topic_' + curr_topic);
     a.classList.add("active");
+    document.getElementById('header').textContent = a.textContent;
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 </script>
 
 <?php include('template/footer.html') ?>
