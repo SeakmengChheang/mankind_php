@@ -5,12 +5,12 @@
       $doctor = htmlspecialchars($_GET['doctor']);
       if($doctor < 1 && $doctor > 5)
         die('error');
-    $sql = "SELECT *FROM doctors WHERE department_id = $doctor";
+    $sql = "SELECT * FROM doctors WHERE department_id = $doctor";
   }
   else {
     $sql = "SELECT * FROM doctors";
    }
-   $sql_quote = "SELECT *FROM quote WHERE department_id = $doctor";
+   $sql_quote = "SELECT * FROM quote WHERE department_id = $doctor";
    $res_quote = mysqli_query($conn, $sql_quote);
    $res = mysqli_query($conn, $sql);
    $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
@@ -26,42 +26,44 @@
   define('TITLE', 'HOME');
   include('template/header.php');
   ?>
+  
+  <!-- Card Wider -->
+  <style>
+    .view-cascade {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      height: 300px;
+    }
+    img.card-img-top {
+      object-position: top;
+      object-fit: cover;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
     <?php include('template/navbar.html') ?>
     
-    <!-- Card Wider -->
-<style>
-    .view-cascade {
-        display: flex;
-        justify-content: center;
-        width: auto;
-        height: 300px;
-    }
-    img.card-img-top {
-    object-position: top;
-    object-fit: cover;
-    text-align: center;
-       }
-</style>
-<?php foreach($quotes as $quote): ?>
-<div class="streak grey lighten-3" style="margin: 40px auto 40px auto;">
-  <div class="flex-center">
-    <ul class="mb-0 list-unstyled">
-      <li>
-        <h2 class="h2-responsive"><i class="fas fa-quote-left" aria-hidden="true"></i>
-        <?php echo $quote['quote'] ?>
-        <i class="fas fa-quote-right"
-            aria-hidden="true"></i></h2>
-      </li>
-      <li class="mb-0">
-        <h5 class="text-center font-italic mb-0">~ <?php echo $quote['name'] ?></h5>
-      </li>
-    </ul>
-  </div>
-</div>
-<?php endforeach ?>
+    <?php foreach($quotes as $quote): ?>
+      <div class="streak grey lighten-3 mb-3">
+        <div class="flex-center">
+          <ul class="mb-0 list-unstyled">
+            <li>
+              <h2 class="h2-responsive"><i class="fas fa-quote-left" aria-hidden="true"></i>
+              <?php echo $quote['quote'] ?>
+              <i class="fas fa-quote-right"
+                  aria-hidden="true"></i></h2>
+            </li>
+            <li class="mb-0">
+              <h5 class="text-center font-italic mb-0">~ <?php echo $quote['name'] ?></h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <?php endforeach ?>
+
   <div class="container">
  
   <div class="row wow fadeIn">
@@ -72,7 +74,7 @@
         <!-- Card image -->
       <div class="doctor_img">
         <div class="view view-cascade overlay">
-            <img class="card-img-top" src="<?php echo BASE_URL . 'img/doctors/' . $doctor['photo_url']; ?>" alt="Card image cap">
+            <img class="card-img-top" src="<?php echo 'img/doctors/' . $doctor['photo_url']; ?>" alt="Card image cap">
             <a href="#!">
             <div class="mask rgba-white-slight"></div>
             </a>
