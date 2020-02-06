@@ -1,6 +1,6 @@
 <div class="container-fluid p-0">
 
-    <div class="row justify-content-around m-3">
+    <div class="row justify-content-around m-3 py-3">
 
         <div class="col-md-5 my-3">
             <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">

@@ -16,7 +16,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
 <div class="container-fluid bgPrimaryColor text-white p-3">
 
-    <div class="p-md-5">
+    <div class="py-5 px-md-5">
         <h3 class="text-center">Lastest News</h3>
         <hr>
 

@@ -3,6 +3,7 @@
 
 <head>
     <?php
+    require_once 'config.php';
     define('TITLE', 'HOME');
     include('./template/header.php');
     ?>

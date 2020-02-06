@@ -1,7 +1,7 @@
 <div class="container-fluid my-3">
     <div class="row p-md-5 mr-md-5">
         <div class="col-md-6">
-            <img class="float-md-right mr-md-5" src="img/home/nurse_left.png" height="380px" width="100%" alt="Nurse">
+            <img class="float-md-right mr-md-5" src="img/home/nurse_left.png" height="380px" alt="Nurse">
         </div>
 
         <div class="col-md-6">

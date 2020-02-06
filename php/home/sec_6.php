@@ -24,7 +24,7 @@ $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
 <div class="container-fluid p-0 my-3">
 
-    <div class="p-md-5">
+    <div class="py-5 px-md-5">
         <h3 class="text-center">Our Experienced Doctors</h3>
         <hr>
 

@@ -60,3 +60,7 @@
 .card-avatar img {
     width: 100px;
 }
+
+.flex-1 {
+    flex: 1;
+}

@@ -50,7 +50,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
             $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
             ?>
             <?php foreach ($topics as $topic) : ?>
-                <li class="nav-item col-lg-1 m-3" style="white-space: nowrap; overflow: hidden;">
+                <li class="nav-item col-lg-1 m-3 text-center" style="white-space: nowrap; overflow: hidden;">
                     <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>"
                        id="topic_<?php echo $topic['id'] ?>">
                         <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
@@ -61,15 +61,8 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
         </ul>
     </div>
     <div class='col-12'>
-        <!-- <div class="tab-content">
-            <div class="tab-pane active show" id="illness">
-            </div>
-            <div class="tab-pane show" id="cancer">
-                <li>Hello</li>
-            </div>
-        </div> -->
         <div class="container">
-            <h1 id="header"></h1>
+            <h1 id="header" class="wow fadeIn"></h1>
 
             <div class="row wow fadeIn">
 

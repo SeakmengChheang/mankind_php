@@ -23,11 +23,7 @@
 
         <div class="container-fluid bg-content">
             <div class="col-md-5 m-auto py-5">
-                <?php 
-                    $sql = "SELECT * FROM doctors";
-                    $res = mysqli_query($conn, $sql);
-                    $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
-                ?>
+                
 
                 <?php include '../php/make_appointment/make_appointment_form.php'; ?>
             </div>
