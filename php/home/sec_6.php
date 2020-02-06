@@ -22,9 +22,9 @@ $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
     }
 </style>
 
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 my-3">
 
-    <div class="p-5">
+    <div class="p-md-5">
         <h3 class="text-center">Our Experienced Doctors</h3>
         <hr>
 
@@ -51,8 +51,8 @@ $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
             <div class="carousel-inner" role="listbox">
 
                 <?php for ($i = 0; $i < 9; $i++) : ?>
-                    <?php if ($i % 3 == 0) echo "<div class=\"carousel-item row mb-2\" id=\"{$i}\">"; ?>
-                    <div class="card card-cascade wider col-md-4">
+                    <?php if ($i % 3 == 0) echo "<div class=\"carousel-item row\" id=\"{$i}\">"; ?>
+                    <div class="card card-cascade wider col-md-4 my-3 center">
 
                         <!-- Card image -->
                         <div class="doctor_img">
@@ -102,6 +102,6 @@ $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
 </div>
 
 <script>
-	var a = document.getElementById('0');
-	a.classList.add('active');
+    var a = document.getElementById('0');
+    a.classList.add('active');
 </script>

@@ -10,7 +10,7 @@
     </div>
     <!--Header-->
 
-    <div class="card-body mx-4">
+    <div class="card-body mx-md-4">
 
         <!--Body-->
         <div class="md-form">
@@ -24,30 +24,21 @@
         </div>
 
         <div class="md-form">
-            <input type="date" name="doa" id="doa" class="form-control">
-            <label for="doa">Date Of Appointment</label>
+            <input placeholder="Select date" type="text" id="date-picker-example" class="form-control datepicker">
+            <label for="date-picker-example">Date Of Appointment</label>
         </div>
 
         <div class="md-form">
-            <label class="mdb-main-label" for="doctor">Doctor</label>
             <select class="mdb-select md-form colorful-select dropdown-primary" id="doctor" searchable="Search here..">
                 <option value="" disabled selected>Choose your doctor</option>
-                <?php 
-                    require_once 'config.php';
-
-                    $sql = "SELECT * FROM doctors";
-                    $res = mysqli_query($conn, $sql);
-                    $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
-                ?>
-
-                <?php foreach($doctors as $doc) :?>
+                <?php foreach ($doctors as $doc) : ?>
                     <option value="<?php echo $doc['id'] ?>">
                         <?php echo $doc['full_name']; ?>
                     </option>
                 <?php endforeach; ?>
             </select>
         </div>
-        
+
         <!--Grid row-->
         <div class="row d-flex mb-4 btnBar">
             <!--Grid column-->

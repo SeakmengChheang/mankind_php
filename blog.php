@@ -1,22 +1,23 @@
 <?php
-    require_once 'config.php';
-        
-    if(isset($_GET['topic'])) {
-        $topic = htmlspecialchars($_GET['topic']);
-        if($topic < 1 && $topic > 5)
-            die('error');
+require_once 'config.php';
 
-        $sql = "SELECT * FROM blogs WHERE ht_id = $topic";
-    } else {
-        $sql = "SELECT * FROM blogs";
-    }
-    $page_no = $_GET['pageno'] ?? 1;
+$sql = "SELECT * FROM blogs";
 
-    $from = $page_no * 9 - 8;
-    $sql .= " LIMIT $from, 9;";
+if (isset($_GET['topic'])) {
+    $topic = htmlspecialchars($_GET['topic']);
+    if ($topic < 1 && $topic > 5)
+        die('error');
 
-    $res = mysqli_query($conn, $sql);
-    $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
+    $sql .= " WHERE ht_id = $topic";
+}
+
+$page_no = $_GET['pageno'] ?? 1;
+
+$from = $page_no * 9 - 8;
+$sql .= " LIMIT $from, 9;";
+
+$res = mysqli_query($conn, $sql);
+$foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 ?>
 
 <!doctype html>
@@ -32,7 +33,7 @@
             height: 230px;
             object-fit: cover;
         }
-    </style>      
+    </style>
 </head>
 <body>
 <?php include('template/navbar.html') ?>
@@ -43,15 +44,16 @@
             <!--
                 color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
             -->
-            <?php 
-                $sql = "SELECT * FROM health_topics;";
-                $res = mysqli_query($conn, $sql);
-                $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
+            <?php
+            $sql = "SELECT * FROM health_topics;";
+            $res = mysqli_query($conn, $sql);
+            $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
             ?>
-            <?php foreach($topics as $topic) : ?>
+            <?php foreach ($topics as $topic) : ?>
                 <li class="nav-item col-lg-1 m-3" style="white-space: nowrap; overflow: hidden;">
-                    <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>" id="topic_<?php echo $topic['id'] ?>">
-                        <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> 
+                    <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>"
+                       id="topic_<?php echo $topic['id'] ?>">
+                        <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
                         <span><?php echo $topic['topic'] ?></span>
                     </a>
                 </li>
@@ -67,20 +69,21 @@
             </div>
         </div> -->
         <div class="container">
-        <h1 id="header"></h1>
+            <h1 id="header"></h1>
 
             <div class="row wow fadeIn">
 
-        <?php foreach ($foods as $food): ?> 
+                <?php foreach ($foods as $food): ?>
                     <!--Grid column-->
-                   
+
                     <div class="col-lg-4 col-md-12 mb-4">
-                      
+
                         <!--Featured image-->
-                     
-                       <div class="img">
+
+                        <div class="img">
                             <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
-                                <img src="<?php echo 'img/foods/' . $food['photo_url']. '.jpg'; ?>" class="img-fluid" alt="">
+                                <img src="<?php echo 'img/foods/' . $food['photo_url'] . '.jpg'; ?>" class="img-fluid"
+                                     alt="">
                                 <a>
                                     <div class="mask"></div>
                                 </a>
@@ -96,11 +99,11 @@
                         <h4 class="mb-3 font-weight-bold dark-grey-text">
                             <strong><?php echo $food['title'] ?></strong>
                         </h4>
-                        <p class="grey-text" ><?php echo $food['body']; ?></p>
+                        <p class="grey-text"><?php echo $food['body']; ?></p>
                         <a class="btn btn-info btn-rounded btn-md change-btn">Read more</a>
                     </div>
-                    
-                    <?php endforeach ?>
+
+                <?php endforeach ?>
             </div>
         </div>
     </div>
@@ -110,7 +113,7 @@
 <nav class="d-flex justify-content-center my-4 wow fadeIn">
     <ul class="pagination pagination-circle pg-info mb-0">
 
-        <?php for($i = 1; $i <= 10; ++$i) : ?>
+        <?php for ($i = 1; $i <= 10; ++$i) : ?>
             <li class="page-item" id="page_<?php echo $i ?>">
                 <a class="page-link" href="<?php echo $_SERVER['REQUEST_URI'] . "&pageno=$i" ?>"><?php echo $i ?></a>
             </li>

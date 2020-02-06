@@ -3,8 +3,6 @@
 
   <!-- Card image -->
   <div class="view view-cascade overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"
-      alt="Card image cap"> -->
       <h3 class="p-5 peach-gradient text-white mb-0 text-center card-img-top text-bold" style="height: 150px;">Login</h3>
     <a>
       <div class="mask rgba-white-slight"></div>

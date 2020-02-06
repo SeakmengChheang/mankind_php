@@ -24,6 +24,7 @@
     <?php include './php/home/sec_5.php'; ?>
     <?php include './php/home/sec_6.php'; ?>
     <?php include './php/home/sec_7.php'; ?>
+    <?php include './php/home/sec_8.php'; ?>
 
     <?php include './template/footer.html' ?>
 </body>
