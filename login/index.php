@@ -4,7 +4,7 @@
 <head>
     <?php
        
-        define('TITLE', 'HOME');
+        define('TITLE', 'Login');
         include ('../template/header.php');
     ?>
 
@@ -16,7 +16,6 @@
         }
     </style>
     
-
 </head>
 <body>
     <?php include ('../template/navbar.html')?>
