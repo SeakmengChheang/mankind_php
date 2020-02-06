@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <?php
-        define('TITLE', 'Home');
-        include ('./template/header.php');
+    define('TITLE', 'HOME');
+    include('./template/header.php');
     ?>
     <style>
         .jarallax {
@@ -11,9 +12,10 @@
         }
     </style>
 </head>
+
 <body>
     <?php include("./template/navbar.html") ?>
-    
+
     <?php include  './php/home/sec_1.php'; ?>
     <?php include './php/home/sec_2.php'; ?>
     <?php include './php/home/sec_3.php'; ?>
@@ -22,5 +24,5 @@
 
     <?php include './template/footer.html' ?>
 </body>
-</html>
 
+</html>

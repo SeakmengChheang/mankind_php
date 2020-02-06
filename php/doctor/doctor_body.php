@@ -10,7 +10,7 @@
     object-position: top;
     object-fit: cover;
     text-align: center;
-}
+       }
 </style>
 
 <div class="container">

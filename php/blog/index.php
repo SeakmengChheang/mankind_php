@@ -5,5 +5,6 @@
 
 <!-- Retrieve all posts from database  -->
 <?php $foods = getNutriPosts(); ?>
+
 <?php  include ('./php/blog/blog_body.php') ?>
 <?php include ('./php/blog/pag_footer.php') ?>

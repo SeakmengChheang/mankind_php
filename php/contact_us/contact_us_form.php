@@ -1,4 +1,5 @@
 <!-- Card Narrower -->
+
 <div class="card card-cascade narrower">
 
   <!-- Card image -->
@@ -48,4 +49,6 @@
   </div>
 
 </div>
+</div>
+
 <!-- Card Narrower -->
