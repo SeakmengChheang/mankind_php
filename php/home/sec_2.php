@@ -1,6 +1,6 @@
-<div class="container-fluid">
-    <div class="row p-5">
-        <div class="col-lg-8 m-auto">
+<div class="container-fluid my-3">
+    <div class="row p-md-5">
+        <div class="col-lg-8 m-md-auto">
             <h2 class="primaryColor pb-md-3">Our Services – Vivamus Sit Amet Nunc Non</h2>
 
             <h5>Vivamus sit amet nunc non erat ullamcorper dignissim in ut velit. Interdum et malesuada fames ac anteipsum primis in faucibus.</h5>
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4 pr-5">
+        <div class="col-lg-4 pr-md-5">
             <?php 
                 include $_SERVER['DOCUMENT_ROOT'] . '/php/make_appointment/make_appointment_form.php';
             ?>

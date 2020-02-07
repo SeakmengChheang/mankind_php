@@ -1,5 +1,5 @@
-<div class="container-fluid #e3f2fd blue lighten-5">
-    <div class="row p-5 ml-5">
+<div class="container-fluid #e3f2fd blue lighten-5 my-3 py-5">
+    <div class="row px-md-5 ml-md-5">
         <div class="col-md-6 p-md-3">
             <h3 class="primaryColor pb-md-3">
                 Integer Vehicula Lobortis Lacus Sit Amet Ullamcorper
@@ -13,7 +13,7 @@
             
         </div>
         <div class="col-md-6">
-            <img class="float-left" src="img/home/nurse-rightx380.png" height="400px" alt="Nurse">
+            <img class="float-md-left" src="img/home/nurse-rightx380.png" height="380px" alt="Nurse">
         </div>
     </div>
 </div>

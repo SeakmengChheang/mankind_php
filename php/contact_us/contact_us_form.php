@@ -2,21 +2,19 @@
 
 <div class="card card-cascade narrower">
 
-  <!-- Card image -->
-  <div class="view view-cascade overlay">
-    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"
-      alt="Card image cap"> -->
-      <h3 class="p-5 blue-gradient text-white mb-0 text-center card-img-top" style="height: 150px;">Contact Us</h3>
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
+    <!-- Card image -->
+    <div class="view view-cascade overlay"  style="height: 150px;">
+        <h3 class="p-5 blue-gradient text-white mb-0 text-center card-img-top" style="height: 150px;">Contact Us</h3>
+        <a>
+            <div class="mask rgba-white-slight"></div>
+        </a>
+    </div>
 
-  <!-- Card content -->
-  <div class="card-body card-body-cascade">
+    <!-- Card content -->
+    <div class="card-body card-body-cascade">
 
-    <!--Body-->
-    <div class="md-form">
+        <!--Body-->
+        <div class="md-form">
             <input type="text" id="Form-name3" class="form-control">
             <label for="Form-email3">Your name</label>
         </div>
@@ -46,7 +44,7 @@
         </div>
         <!--Grid row-->
 
-  </div>
+    </div>
 
 </div>
 </div>

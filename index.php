@@ -3,6 +3,7 @@
 
 <head>
     <?php
+    require_once 'config.php';
     define('TITLE', 'HOME');
     include('./template/header.php');
     ?>
@@ -11,6 +12,7 @@
             min-height: 200px;
         }
     </style>
+
 </head>
 
 <body>
@@ -21,6 +23,9 @@
     <?php include './php/home/sec_3.php'; ?>
     <?php include './php/home/sec_4.php'; ?>
     <?php include './php/home/sec_5.php'; ?>
+    <?php include './php/home/sec_6.php'; ?>
+    <?php include './php/home/sec_7.php'; ?>
+    <?php include './php/home/sec_8.php'; ?>
 
     <?php include './template/footer.html' ?>
 </body>

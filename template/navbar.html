@@ -2,28 +2,28 @@
     .nav-item {
         padding: 10px;
     }
-
+    
     .nav-item:hover .nav-link {
         color: #2ea3ad !important;
     }
-
+    
     figure {
         display: flex;
         align-items: center;
     }
-
+    
     .social-icons:hover .fab {
         color: black;
     }
-
+    
     .dropdown-toggle::after {
         transition: transform 0.15s linear;
     }
-
+    
     .show.dropdown .dropdown-toggle::after {
         transform: translateY(3px);
     }
-
+    
     .dropdown-menu {
         margin-top: 0;
     }
@@ -54,12 +54,11 @@
     </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-light white sticky-top px-5 align-middle" role="navigation"
-    aria-label="main navigation">
+<nav class="navbar navbar-expand-lg navbar-light white sticky-top px-5 align-middle" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-link" href="/">
             <figure>
-                <img class="center" src="/img/logo.png" width="75">
+                <img class="center w-md-75" src="/img/logo.png">
                 <figcaption>
                     <h4 class="primaryColor">Mankind Medicare</h4>
                     <small class="secondaryColor">Your health is our concerns</small>
@@ -69,19 +68,16 @@
     </div>
 
     <!-- Collapse button -->
-    <button class="navbar-toggler toggler-example tempting-azure-gradient z-depth-1" type="button"
-        data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false"
-        aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
+    <button class="navbar-toggler toggler-example tempting-azure-gradient z-depth-1" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
 
     <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav" style="height: 100%;">
+    <div class="collapse navbar-collapse" id="basicExampleNav">
 
         <!-- Links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/index.php">Home</a>
+                <a class="nav-link" href="/">Home</a>
             </li>
-
 
             <li class="nav-item dropdown">
 
@@ -89,12 +85,12 @@
                  Health Topics </a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="blog.php?topic=1">Nutrition</a>
-                    <a class="dropdown-item" href="blog.php?topic=2">Food Safety</a>
+                    <a class="dropdown-item" href="/blog.php?topic=1">Nutrition</a>
+                    <a class="dropdown-item" href="/blog.php?topic=2">Food Safety</a>
                     <!-- <div class="dropdown-divider"></div> -->
-                    <a class="dropdown-item" href="blog.php?topic=3">New Disease</a>
-                    <a class="dropdown-item" href="blog.php?topic=4">Infection Control</a>
-                    <a class="dropdown-item" href="blog.php?topic=5">Public Health and Environment</a>
+                    <a class="dropdown-item" href="/blog.php?topic=3">New Disease</a>
+                    <a class="dropdown-item" href="/blog.php?topic=4">Infection Control</a>
+                    <a class="dropdown-item" href="/blog.php?topic=5">Public Health and Environment</a>
                 </div>
             </li>
 
@@ -106,48 +102,40 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 
-                    <a class="dropdown-item" href="doctors.php?doctor=1">Allergists</a>
-                    <a class="dropdown-item" href="doctors.php?doctor=2">Dermatologists</a>
+                    <a class="dropdown-item" href="/doctors.php?doctor=1">Allergists</a>
+                    <a class="dropdown-item" href="/doctors.php?doctor=2">Dermatologists</a>
                     <!-- <div class="dropdown-divider"></div> -->
-                    <a class="dropdown-item" href="doctors.php?doctor=3">Cardiologists</a>
-                    <a class="dropdown-item" href="doctors.php?doctor=4">Ophthalmologists</a>
-                    <a class="dropdown-item" href="doctors.php?doctor=5">Endocrinologists</a>
+                    <a class="dropdown-item" href="/doctors.php?doctor=3">Cardiologists</a>
+                    <a class="dropdown-item" href="/doctors.php?doctor=4">Ophthalmologists</a>
+                    <a class="dropdown-item" href="/doctors.php?doctor=5">Endocrinologists</a>
 
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="new&event.php">News & Events</a>
+                <a class="nav-link" href="/new&event.php">News & Events</a>
             </li>
             <li class="nav-item dropdown">
 
-                <a class="nav-link dropdown-toggle" href="about_us.php" id="navbarDropdown2" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="about_us.php" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About Us
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="about_us.php">Hospital Director Message</a>
-                    <a class="dropdown-item" href="about_us.php">Our vision & Mission</a>
-                    <!-- <div class="dropdown-divider"></div> -->
-                    <a class="dropdown-item" href="about_us.php">Our Technology</a>
+                    <a class="dropdown-item" href="/about_us.php">Hospital Director Message</a>
+                    <a class="dropdown-item" href="/about_us.php">Our vision & Mission</a>
+                    <a class="dropdown-item" href="/about_us.php">Our Technology</a>
 
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/contact_us" id="navbarDropdown2" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="/contact_us" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Contact Us
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                     <a class="dropdown-item" href="/contact_us">Feedback</a>
-
-
+                    <a class="dropdown-item" href="/contact_us/make_appointment.php">Make an Appointment</a>
                 </div>
             </li>
-
-
-
-
 
             <li class="nav-item ">
                 <!-- <form action="register.php">
@@ -171,5 +159,3 @@
     </div>
     <!-- Collapsible content -->
 </nav>
-<script src="./js/jquery-3.4.1.min.js"></script>
-<script src="./js/dropdown.js"></script>

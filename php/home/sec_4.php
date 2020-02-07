@@ -1,7 +1,7 @@
-<div class="container-fluid">
-    <div class="row p-5 mr-5">
+<div class="container-fluid my-3">
+    <div class="row p-md-5 mr-md-5">
         <div class="col-md-6">
-            <img class="float-right mr-5" src="img/home/nurse_left.png" height="400px" alt="Nurse">
+            <img class="float-md-right mr-md-5" src="img/home/nurse_left.png" height="380px" alt="Nurse">
         </div>
 
         <div class="col-md-6">
@@ -10,7 +10,7 @@
             </h3>
             <p>Vestibulum eu feugiat dolor. Cras non nunc lobortis, tristique mauris accumsan.</p>
 
-            <div class="row p-2 pb-md-3">
+            <div class="row p-md-2 pb-md-3">
                 <div class="col-md-6">
                     <h5 class="primaryColor">Anesthesiology</h5>
                     <h6>Proin quis tincidunt lectus. Mauris commodo augue semper magna maximus blandit. Aliquam et risus dapibus.</h6>
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="row p-2 pb-md-3">
+            <div class="row p-md-2 pb-md-3">
                 <div class="col-md-6">
                     <h5 class="primaryColor">Internal Medicine</h5>
                     <h6>Nunc pretium nulla magna. Donec elementum odio vel sem egestas, vitae porttitor ipsum semper.</h6>
