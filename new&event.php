@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php
-        define('TITLE', 'About Us');
+        define('TITLE', 'News & Events');
         include('template/header.php');
     ?>
 </head>
