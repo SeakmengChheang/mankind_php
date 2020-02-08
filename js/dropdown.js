@@ -11,6 +11,7 @@ $(window).on("load resize", function() {
         $this.addClass(showClass);
         $this.find($dropdownToggle).attr("aria-expanded", "true");
         $this.find($dropdownMenu).addClass(showClass);
+       
       },
       function() {
         const $this = $(this);
