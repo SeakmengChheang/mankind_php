@@ -32,7 +32,7 @@
             <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
             laboriosam, nisi ut aliquid ex ea commodi.</p>
             <!-- Button -->
-            <a class="btn btn-unique">Read more</a>
+            <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $new['id'] ?>&name=2">Read more</a>
 
         </div>
 
