@@ -27,6 +27,10 @@
     .dropdown-menu {
         margin-top: 0;
     }
+    
+    .navbar-brand img {
+        height: 75px;
+    }
 </style>
 <div class="navbar-menu contact-nav container-fluid border-bottom px-5 py-2">
     <div class="row justify-content-between">
@@ -54,11 +58,11 @@
     </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-light white sticky-top px-5 align-middle" role="navigation" aria-label="main navigation">
+<nav class="navbar navbar-expand-lg navbar-light white sticky-top px-sm-5 align-middle" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-link" href="/">
             <figure>
-                <img class="center w-md-75" src="/img/logo.png">
+                <img src="/img/logo.png">
                 <figcaption>
                     <h4 class="primaryColor">Mankind Medicare</h4>
                     <small class="secondaryColor">Your health is our concerns</small>
@@ -68,7 +72,7 @@
     </div>
 
     <!-- Collapse button -->
-    <button class="navbar-toggler toggler-example tempting-azure-gradient z-depth-1" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
+    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars fa-1x"></i></span></button>
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
@@ -117,13 +121,13 @@
             </li>
             <li class="nav-item dropdown">
 
-                <a class="nav-link dropdown-toggle" href="about_us.php" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="about_us.php?catego=message" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About Us
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="/about_us.php">Hospital Director Message</a>
-                    <a class="dropdown-item" href="/about_us.php">Our vision & Mission</a>
-                    <a class="dropdown-item" href="/about_us.php">Our Technology</a>
+                    <a class="dropdown-item" href="/about_us.php?catego=message">Hospital Director Message</a>
+                    <a class="dropdown-item" href="/about_us.php?catego=vision">Our vision & Mission</a>
+                    <a class="dropdown-item" href="/about_us.php?catego=tech">Our Technology</a>
 
                 </div>
             </li>
@@ -138,11 +142,6 @@
             </li>
 
             <li class="nav-item ">
-                <!-- <form action="register.php">
-                    <button type="submit" class="btn waves-effect">
-                        Register
-                    </button>
-                </form> -->
                 <a class="nav-link" href="/register">Register</a>
             </li>
 

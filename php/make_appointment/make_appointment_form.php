@@ -1,16 +1,19 @@
-<div class="card">
+<!-- Card Narrower -->
 
-    <!--Header-->
-    <div class="header p-5 blue-gradient">
+<div class="card card-cascade narrower">
 
-        <div class="row d-flex justify-content-center">
-            <h3 class="white-text mb-3 pt-3 font-weight-bold">Make an appointment today</h3>
-        </div>
-
+    <!-- Card image -->
+    <div class="view view-cascade overlay d-table"  style="height: 150px;">
+        <h3 class="blue-gradient text-white mb-md-0 d-table-cell align-middle text-center card-img-top" >
+            Make an appointment today
+        </h3>
+        <a>
+            <div class="mask rgba-white-slight"></div>
+        </a>
     </div>
-    <!--Header-->
 
-    <div class="card-body mx-md-4">
+    <!-- Card content -->
+    <div class="card-body card-body-cascade">
 
         <!--Body-->
         <div class="md-form">
@@ -64,6 +67,10 @@
 
         </div>
         <!--Grid row-->
+
     </div>
 
 </div>
+</div>
+
+<!-- Card Narrower -->

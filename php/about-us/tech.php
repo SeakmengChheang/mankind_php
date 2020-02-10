@@ -1,6 +1,6 @@
 <div class="msg-wrapper">
 <div class="row row-cols-1 row-cols-md-2">
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -28,7 +28,7 @@
     </div>
     <!-- Card Wider -->
   </div>
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -56,7 +56,7 @@
     </div>
     <!-- Card Wider -->
   </div>
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -87,7 +87,7 @@
 </div>
 
 <div class="row row-cols-1 row-cols-md-2">
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -115,7 +115,7 @@
     </div>
     <!-- Card Wider -->
   </div>
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -143,7 +143,7 @@
     </div>
     <!-- Card Wider -->
   </div>
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -176,7 +176,7 @@
 
 
 <div class="row row-cols-1 row-cols-md-2">
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -205,7 +205,7 @@
     </div>
     <!-- Card Wider -->
   </div>
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">
@@ -233,7 +233,7 @@
     </div>
     <!-- Card Wider -->
   </div>
-  <div class="col mb-4">
+  <div class="col-lg-4 col-md-12 mb-4">
 
     <!-- Card Wider -->
     <div class="card card-cascade wider">

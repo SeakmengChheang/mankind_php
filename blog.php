@@ -93,7 +93,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                             <strong><?php echo $food['title'] ?></strong>
                         </h4>
                         <p class="grey-text"><?php echo $food['body']; ?></p>
-                        <a class="btn btn-info btn-rounded btn-md change-btn">Read more</a>
+                        <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $food['id'] ?>&name=1">Read more</a>
                     </div>
 
                 <?php endforeach ?>

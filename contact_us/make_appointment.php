@@ -13,6 +13,9 @@
         .bg-image {
             background-image: url('/img/contact_us_bg.png');
         }
+        .picker__frame {
+            top: 20% !important;
+        }
     </style>
 </head>
 <body>
