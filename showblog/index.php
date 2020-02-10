@@ -54,7 +54,7 @@
             <?php 
             
             if($_GET['name'] == 1)
-               echo '../img/foods/' . $blog['photo_url'] . '.jpg'; 
+               echo '../img/blog/' . $blog['photo_url']; 
             else if($_GET['name'] == 2)
                echo '../img/news/' . $blog['photo_url']; 
             ?>
