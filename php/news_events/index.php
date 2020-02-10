@@ -29,7 +29,7 @@
                     <p class="card-text">Bangkok Dusit Medical Services is teaming with Oregon Health & Science
                         University</p>
                     <!-- Button -->
-                    <a class="btn btn-default">Read more</a>
+                    <a href="php/news_events/news.php" class="btn btn-default">Read more</a>
 
                 </div>
 
