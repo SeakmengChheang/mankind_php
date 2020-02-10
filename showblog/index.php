@@ -8,6 +8,7 @@
         if(isset($_GET['id']))
         {
            if($_GET['name'] == 1){
+           
             $id = htmlspecialchars($_GET['id']);
             $sql = "SELECT *FROM blogs WHERE id = $id";
             $res = mysqli_query($conn, $sql);

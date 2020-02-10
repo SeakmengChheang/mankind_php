@@ -4,7 +4,24 @@
      $res = mysqli_query($conn, $sql);
      $news = mysqli_fetch_all($res, MYSQLI_ASSOC);
  ?>
+<head>
+<style>
+    .view-cascade {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      height: 230px;
+    }
+    img.card-img-top {
+      object-position: top;
+      object-fit: cover;
+      text-align: center;
+      
+    }
 
+
+</style>
+</head>
 <div class="container">
   <h2 class="my-5">New and Event</h2>
 <div class="row wow fadeIn">
@@ -29,8 +46,6 @@
             <!-- Title -->
             <h4 class="font-weight-bold card-title"><?php echo $new['title'] ?></h4>
             <!-- Text -->
-            <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-            laboriosam, nisi ut aliquid ex ea commodi.</p>
             <!-- Button -->
             <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $new['id'] ?>&name=2">Read more</a>
 
