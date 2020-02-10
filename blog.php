@@ -4,6 +4,7 @@ require_once 'config.php';
 $sql = "SELECT * FROM blogs";
 
 if (isset($_GET['topic'])) {
+    $_GET['topic'] = $_GET['topic'] == '' ? 1 : $_GET['topic'];
     $topic = htmlspecialchars($_GET['topic']);
     if ($topic < 1 && $topic > 5)
         die('error');
