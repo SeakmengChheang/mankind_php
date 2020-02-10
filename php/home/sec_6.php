@@ -74,7 +74,7 @@ $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
                             <!-- Subtitle -->
                             <h5 class="blue-text pb-2"><strong><?php echo $doctors[$i]['email'] ?></strong></h5>
                             <!-- Text -->
-                            <p class="card-text"><?php echo $doctors[$i]['description'] ?></p>
+                            <p class="card-text desc"><?php echo $doctors[$i]['description'] ?></p>
 
                             <!-- Linkedin -->
                             <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>

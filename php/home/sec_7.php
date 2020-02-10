@@ -32,7 +32,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
                         <div class="img">
                             <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
-                                <img src="<?php echo 'img/foods/' . $food['photo_url'] . '.jpg'; ?>" class="img-fluid"
+                                <img src="<?php echo 'img/blog/' . $food['photo_url']; ?>" class="img-fluid"
                                      alt="">
                                 <a>
                                     <div class="mask"></div>

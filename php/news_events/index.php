@@ -17,7 +17,7 @@
        
         <!-- Card image -->
         <div class="view view-cascade overlay">
-            <img class="card-img-top" src="<?php echo 'img/news/'.$new['photo_url'] ?>"
+            <img class="card-img-top" src="<?php echo 'img/news/'. $new['photo_url'] ?>"
             alt="Card image cap">
             <a>
             <div class="mask rgba-white-slight"></div>

@@ -50,12 +50,12 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
             $res = mysqli_query($conn, $sql);
             $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
             ?>
-            <?php foreach ($topics as $topic) : ?>
-                <li class="nav-item col-lg-1 m-3 text-center" style="white-space: nowrap; overflow: hidden;">
+            <?php foreach ($topics as $topic) : ?> 
+                <li class="nav-item col-lg-1 m-3 text-center" style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">
                     <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>"
                        id="topic_<?php echo $topic['id'] ?>">
                         <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
-                        <span><?php echo $topic['topic'] ?></span>
+                        <span class='mr-3'><?php echo $topic['topic'] ?></span>
                     </a>
                 </li>
             <?php endforeach; ?>
@@ -76,13 +76,14 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
                         <div class="img">
                             <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
-                                <img src="<?php echo 'img/foods/' . $food['photo_url'] . '.jpg'; ?>" class="img-fluid"
+                                <img src="<?php echo 'img/blog/' . $food['photo_url']; ?>" class="img-fluid"
                                      alt="">
                                 <a>
                                     <div class="mask"></div>
                                 </a>
                             </div>
                         </div>
+
                         <!--Excerpt-->
                         <a href="" class="pink-text">
                             <h6 class="mb-3 mt-4">
@@ -93,7 +94,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                         <h4 class="mb-3 font-weight-bold dark-grey-text">
                             <strong><?php echo $food['title'] ?></strong>
                         </h4>
-                        <p class="grey-text"><?php echo $food['body']; ?></p>
+                        <p class="grey-text desc"><?php echo $food['body']; ?></p>
                         <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $food['id'] ?>&name=1">Read more</a>
                     </div>
 

@@ -89,7 +89,7 @@
             <!-- Subtitle -->
             <h5 class="blue-text pb-2"><strong><?php echo $doctor['email'] ?></strong></h5>
             <!-- Text -->
-            <p class="card-text"><?php echo $doctor['description'] ?></p>
+            <p class="card-text desc"><?php echo $doctor['description'] ?></p>
 
             <!-- Linkedin -->
             <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
