@@ -1,6 +1,7 @@
 <?php
 
 // connect to database
+// $conn = mysqli_connect("localhost", "id12481809_root", "menglove", "id12481809_mankind");
 $conn = mysqli_connect("127.0.0.1", "root", "root", "mankind");
 
 if (!$conn) {
