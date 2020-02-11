@@ -11,7 +11,7 @@
 
     <div class="container-fluid p-3 row">
         <div class='col-12'>
-            <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center" role="tablist">
+            <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center" data-aos="zoom-in-down" role="tablist">
                 <li class="nav-item col-md-1 m-3">
                     <a class="nav-link" href="#message" id="message1" role="tab" data-toggle="tab" aria-selected="true">
                         <i class="fas fa-user-md" aria-hidden="true"></i> Hospital Director Message
