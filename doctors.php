@@ -23,7 +23,7 @@
 
 <head>
   <?php
-  define('TITLE', 'HOME');
+  define('TITLE', 'Doctor');
   include('template/header.php');
   ?>
   

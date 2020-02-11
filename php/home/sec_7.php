@@ -50,7 +50,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                             <strong><?php echo $food['title'] ?></strong>
                         </h4>
 
-                        <div class="collapse-content">
+                        <div>
 
                             <div class="collapse" id="collapse_<?php echo $food['id'] ?>">
 
@@ -60,9 +60,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
                             <hr class="">
 
-                            <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 deep-purple-text collapsed"
-                               data-toggle="collapse" href="#collapse_<?php echo $food['id'] ?>" aria-expanded="false"
-                               aria-controls="collapseExample1"></a>
+                            <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $food['id'] ?>&name=1">Read more</a>
 
                         </div>
 

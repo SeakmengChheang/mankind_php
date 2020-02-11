@@ -37,7 +37,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
     </style>
 </head>
 <body>
-<?php include('template/navbar.html') ?>
+<?php  include('template/navbar.html') ?>
 
 <div class="container-fluid p-3 row">
     <div class='col-12'>
@@ -53,6 +53,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
             <!-- style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;" -->
             <?php foreach ($topics as $t) : ?> 
                 <li class="nav-item col-lg-1 m-3 text-center" >
+                 
                     <a class="nav-link" href="blog.php?topic=<?php echo $t['id'] ?>"
                        id="topic_<?php echo $t['id'] ?>">
                         <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
