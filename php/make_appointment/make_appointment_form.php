@@ -1,6 +1,6 @@
 <!-- Card Narrower -->
 
-<div class="card card-cascade narrower">
+<div class="card card-cascade narrower" data-aos="flip-left" data-aos-duration="1000">
 
     <!-- Card image -->
     <div class="view view-cascade overlay d-table"  style="height: 150px;">

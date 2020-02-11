@@ -25,13 +25,13 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 			<?php foreach ($foods as $food) : ?>
 
                 <!-- Card -->
-                <div class="card weather-card col-md-3 my-3">
+                <div class="card weather-card col-md-3 my-3"  data-aos="flip-right">
 
                     <!-- Card content -->
                     <div class="card-body pb-3">
 
                         <div class="img">
-                            <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
+                            <div class="view overlay hm-white-slight rounded z-depth-2 mb-4 img-hover-zoom">
                                 <img src="<?php echo 'img/blog/' . $food['photo_url']; ?>" class="img-fluid"
                                      alt="">
                                 <a>

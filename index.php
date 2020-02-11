@@ -11,6 +11,12 @@
         .jarallax {
             min-height: 200px;
         }
+
+        @media (max-width: 760px) {
+            .jarallax {
+                min-height: 600px;
+            }
+        }
     </style>
 
 </head>

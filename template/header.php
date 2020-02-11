@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="/css/mdb.lite.min.css" >
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/custom.css" >
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 
