@@ -76,15 +76,9 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                         <!--Featured image-->
 
                         <div class="img">
-<<<<<<< HEAD
-                            <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
-                                <img src="<?php echo 'img/blog/' . $food['photo_url'] . '.jpg'; ?>" class="img-fluid"
-                                     alt="">
-=======
                             <div class="view overlay hm-white-slight rounded z-depth-2 mb-4 img-hover-zoom">
                                 <img src="<?php echo 'img/blog/' . $food['photo_url']; ?>" class="img-fluid"
                                 alt="">
->>>>>>> 8cfab048d6f24be398aa268aba3a9666c60b5d9b
                                 <a>
                                     <div class="mask"></div>
                                 </a>
@@ -176,4 +170,3 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 <?php include('template/footer.html') ?>
 </body>
 </html>
-

@@ -18,6 +18,12 @@
       text-align: center;
       
     }
+    .des{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    }
 
 
 </style>
@@ -33,7 +39,7 @@
         <div class="card card-cascade narrower">
        
         <!-- Card image -->
-        <div class="view view-cascade overlay">
+        <div class="view view-cascade overlay img-hover-zoom">
             <img class="card-img-top" src="<?php echo 'img/news/'. $new['photo_url'] ?>"
             alt="Card image cap">
             <a>
@@ -44,7 +50,7 @@
         <!-- Card content -->
         <div class="card-body card-body-cascade">
             <!-- Title -->
-            <h4 class="font-weight-bold card-title"><?php echo $new['title'] ?></h4>
+            <h4 class="font-weight-bold card-title des"><?php echo $new['title'] ?></h4>
             <!-- Text -->
             <!-- Button -->
             <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $new['id'] ?>&name=2">Read more</a>
