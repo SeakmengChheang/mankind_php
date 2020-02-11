@@ -170,4 +170,3 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 <?php include('template/footer.html') ?>
 </body>
 </html>
-
