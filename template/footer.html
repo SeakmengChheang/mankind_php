@@ -142,6 +142,7 @@
 <script src="/js/popper.min.js"></script>
 <script src="/js/style.js"></script>
 <script src="/js/dropdown.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
     // object-fit polyfill run
@@ -161,5 +162,10 @@
     jarallax(document.querySelectorAll('.jarallax-keep-img'), {
         keepImg: true,
         automaticResize: true,
+    });
+
+    AOS.init({
+        duration: 1000,
+        delay: 100,
     });
 </script>

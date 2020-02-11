@@ -3,14 +3,14 @@ require_once 'config.php';
 
 $sql = "SELECT * FROM blogs";
 
-if (isset($_GET['topic'])) {
-    $_GET['topic'] = $_GET['topic'] == '' ? 1 : $_GET['topic'];
-    $topic = htmlspecialchars($_GET['topic']);
-    if ($topic < 1 && $topic > 5)
-        die('error');
+$_GET['topic'] = $_GET['topic'] ?? 1;
+$topic = htmlspecialchars($_GET['topic'] == '' ? 1 : $_GET['topic']);
+if ($topic < 1 && $topic > 5)
+    die('error');
 
-    $sql .= " WHERE ht_id = $topic";
-}
+$sql .= " WHERE ht_id = $topic";
+$res = mysqli_query($conn, "SELECT COUNT(*) as cnt FROM blogs WHERE ht_id = $topic");
+$cnt = mysqli_fetch_assoc($res)['cnt'];
 
 $page_no = $_GET['pageno'] ?? 1;
 
@@ -41,21 +41,21 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
 <div class="container-fluid p-3 row">
     <div class='col-12'>
-        <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center" role="tablist">
+        <ul class="nav nav-pills nav-pills-info nav-pills-icons flex-row justify-content-center"  data-aos="zoom-in-down" role="tablist">
             <!--
                 color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
             -->
             <?php
-            $sql = "SELECT * FROM health_topics;";
-            $res = mysqli_query($conn, $sql);
-            $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
+                $sql = "SELECT * FROM health_topics;";
+                $res = mysqli_query($conn, $sql);
+                $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
             ?>
-            <?php foreach ($topics as $topic) : ?> 
+            <?php foreach ($topics as $t) : ?> 
                 <li class="nav-item col-lg-1 m-3 text-center" style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;">
-                    <a class="nav-link" href="blog.php?topic=<?php echo $topic['id'] ?>"
-                       id="topic_<?php echo $topic['id'] ?>">
+                    <a class="nav-link" href="blog.php?topic=<?php echo $t['id'] ?>"
+                       id="topic_<?php echo $t['id'] ?>">
                         <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
-                        <span class='mr-3'><?php echo $topic['topic'] ?></span>
+                        <span class='mr-3'><?php echo $t['topic'] ?></span>
                     </a>
                 </li>
             <?php endforeach; ?>
@@ -75,9 +75,9 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                         <!--Featured image-->
 
                         <div class="img">
-                            <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
+                            <div class="view overlay hm-white-slight rounded z-depth-2 mb-4 img-hover-zoom">
                                 <img src="<?php echo 'img/blog/' . $food['photo_url']; ?>" class="img-fluid"
-                                     alt="">
+                                alt="">
                                 <a>
                                     <div class="mask"></div>
                                 </a>
@@ -107,12 +107,45 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 <!--Pagination -->
 <nav class="d-flex justify-content-center my-4 wow fadeIn">
     <ul class="pagination pagination-circle pg-info mb-0">
+        <li class="page-item" id="prev_page">
+            <a class="page-link" aria-label="Previous" href="<?php
+                $tmp = $_GET['pageno'] - 1 ?? 1;
+                echo $_SERVER['PHP_SELF'] . "?topic=$topic" . "&pageno=$tmp";
+            ?>">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
 
-        <?php for ($i = 1; $i <= 10; ++$i) : ?>
+        <?php 
+            $pages = ceil($cnt / 9);
+            if($page_no < 3) {
+                $from = 1;
+                $to = 5;
+            } elseif($page_no > $pages - 2) {
+                $from = $pages - 5;
+                $to = $pages;
+            } else {
+                $from = $page_no - 2;
+                $to = $page_no + 2;
+            }
+        ?>
+        <?php for ($i = $from; $i <= $to; ++$i) : ?>
             <li class="page-item" id="page_<?php echo $i ?>">
-                <a class="page-link" href="<?php echo $_SERVER['REQUEST_URI'] . "&pageno=$i" ?>"><?php echo $i ?></a>
+                <a class="page-link" href="<?php echo $_SERVER['PHP_SELF'] . "?topic=$topic"  . "&pageno=$i" ?>"><?php echo $i ?></a>
             </li>
         <?php endfor; ?>
+
+        <li class="page-item" id="next_page">
+            <a class="page-link" aria-label="Next" href="<?php
+                $tmp = $_GET['pageno'] ?? 1;
+                ++$tmp;
+                echo $_SERVER['PHP_SELF'] . "?topic=$topic" . "&pageno=$tmp";
+            ?>">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
     </ul>
 </nav>
 
@@ -126,9 +159,11 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
     a.classList.add("active");
     document.getElementById('header').textContent = a.textContent;
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+    var all_page = "<?php echo $pages ?>";
+    if(curr_page == 1)
+        document.getElementById('prev_page').classList.add("disabled");
+    else if(curr_page == all_page)
+        document.getElementById('next_page').classList.add("disabled");
 </script>
 
 <?php include('template/footer.html') ?>

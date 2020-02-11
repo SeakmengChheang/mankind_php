@@ -73,7 +73,7 @@
 
         <!-- Card image -->
       <div class="doctor_img">
-        <div class="view view-cascade overlay">
+        <div class="view view-cascade overlay img-hover-zoom">
             <img class="card-img-top" src="<?php echo 'img/doctors/' . $doctor['photo_url']; ?>" alt="Card image cap">
             <a href="#!">
             <div class="mask rgba-white-slight"></div>

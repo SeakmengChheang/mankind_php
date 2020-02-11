@@ -76,3 +76,15 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.3);
+}

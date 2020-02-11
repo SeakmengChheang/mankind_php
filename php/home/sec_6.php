@@ -56,7 +56,7 @@ $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
                         <!-- Card image -->
                         <div class="doctor_img">
-                            <div class="view view-cascade overlay">
+                            <div class="view view-cascade overlay img-hover-zoom">
                                 <img class="card-img-top"
                                      src="<?php echo 'img/doctors/' . $doctors[$i]['photo_url']; ?>"
                                      alt="Card image cap">
