@@ -3,7 +3,7 @@ require_once 'config.php';
 
 $sql = "SELECT * FROM blogs LIMIT 3";
 $res = mysqli_query($conn, $sql);
-$foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
+
 ?>
 
 <style>
@@ -22,7 +22,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
         <div class="row justify-content-around m-2">
 
-			<?php foreach ($foods as $food) : ?>
+			<?php while ($food = mysqli_fetch_array($res)) :?>
 
                 <!-- Card -->
                 <div class="card weather-card col-md-3 my-3"  data-aos="flip-right">
@@ -69,11 +69,11 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                 </div>
                 <!-- Card -->
 
-            <?php endforeach; ?>
+            <?php endwhile; ?>
 
         </div>
 
 
 	</div>
-	
+
 </div>

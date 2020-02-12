@@ -29,7 +29,7 @@
                 </li>
             </ul>
         </div>
-    
+
         <div class='col-12'>
             <div class="tab-content">
                 <div class="tab-pane" id="message">
@@ -43,18 +43,18 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
 
     <?php include ('template/footer.html') ?>
 </body>
 </html>
-<?php 
+<?php
     if(isset($_GET['catego']))
     {
         $category = htmlspecialchars($_GET['catego']);
-        ?> 
+        ?>
         <script>
                 var tap = document.getElementById("<?php echo $category ?>");
                 tap.classList.add('active');
@@ -62,5 +62,10 @@
                 nav.classList.add('active');
         </script>
         <?php
+    }
+    else{
+      http_response_code(404);
+      header("Location: error.php");
+      die();
     }
 ?>

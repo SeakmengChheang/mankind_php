@@ -17,8 +17,8 @@ $page_no = $_GET['pageno'] ?? 1;
 $from = $page_no * 9 - 8;
 $sql .= " LIMIT $from, 9;";
 
-$res = mysqli_query($conn, $sql);
-$foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
+$res_blog = mysqli_query($conn, $sql);
+
 ?>
 
 <!doctype html>
@@ -48,19 +48,19 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
             <?php
                 $sql = "SELECT * FROM health_topics;";
                 $res = mysqli_query($conn, $sql);
-                $topics = mysqli_fetch_all($res, MYSQLI_ASSOC);
+              
             ?>
             <!-- style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;" -->
-            <?php foreach ($topics as $t) : ?> 
+            <?php while ($t = mysqli_fetch_array($res)): ?>
                 <li class="nav-item col-lg-1 m-3 text-center" >
-                 
+
                     <a class="nav-link" href="blog.php?topic=<?php echo $t['id'] ?>"
                        id="topic_<?php echo $t['id'] ?>">
                         <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
                         <span><?php echo $t['topic'] ?></span>
                     </a>
                 </li>
-            <?php endforeach; ?>
+            <?php endwhile; ?>
         </ul>
     </div>
     <div class='col-12'>
@@ -69,7 +69,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
             <div class="row wow fadeIn">
 
-                <?php foreach ($foods as $food): ?>
+                <?php while ($food = mysqli_fetch_array($res_blog)): ?>
                     <!--Grid column-->
 
                     <div class="col-lg-4 col-md-12 mb-4">
@@ -100,7 +100,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                         <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $food['id'] ?>&name=1">Read more</a>
                     </div>
 
-                <?php endforeach ?>
+                <?php endwhile; ?>
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
             </a>
         </li>
 
-        <?php 
+        <?php
             $pages = ceil($cnt / 9);
             if($page_no < 3) {
                 $from = 1;

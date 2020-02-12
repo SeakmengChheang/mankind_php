@@ -39,17 +39,17 @@
         <div class="md-form">
             <select class="mdb-select md-form colorful-select dropdown-primary" id="doctor" searchable="Search here..">
                 <option value="" disabled selected>Choose your doctor</option>
-                <?php 
+                <?php
                     $sql = "SELECT * FROM doctors";
                     $res = mysqli_query($conn, $sql);
-                    $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
+                    
                 ?>
 
-                <?php foreach ($doctors as $doc) : ?>
+                <?php while ($doc = mysqli_fetch_array($res))  : ?>
                     <option value="<?php echo $doc['id'] ?>">
                         <?php echo $doc['full_name']; ?>
                     </option>
-                <?php endforeach; ?>
+                <?php endwhile; ?>
             </select>
         </div>
 

@@ -2,19 +2,21 @@
   require_once 'config.php';
   if(isset($_GET['doctor']))
   {
-      $doctor = htmlspecialchars($_GET['doctor']);
+
+      $doctor = htmlspecialchars($_GET['doctor'] == '' ? 1 : $_GET['doctor']);
       if($doctor < 1 && $doctor > 5)
         die('error');
-    $sql = "SELECT * FROM doctors WHERE department_id = $doctor";
+     $sql = "SELECT * FROM doctors WHERE department_id = $doctor";
+     $sql_quote = "SELECT * FROM quote WHERE department_id = $doctor";
   }
   else {
-    $sql = "SELECT * FROM doctors";
+     $sql = "SELECT * FROM doctors WHERE department_id = 1";
+     $sql_quote = "SELECT * FROM quote WHERE department_id = 1";
    }
-   $sql_quote = "SELECT * FROM quote WHERE department_id = $doctor";
+
    $res_quote = mysqli_query($conn, $sql_quote);
    $res = mysqli_query($conn, $sql);
-   $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
-   $quotes = mysqli_fetch_all($res_quote, MYSQLI_ASSOC);
+
 ?>
 
 
@@ -26,7 +28,7 @@
   define('TITLE', 'Doctor');
   include('template/header.php');
   ?>
-  
+
   <!-- Card Wider -->
   <style>
     .view-cascade {
@@ -45,8 +47,8 @@
 
 <body>
     <?php include('template/navbar.html') ?>
-    
-    <?php foreach($quotes as $quote): ?>
+
+    <?php while ($quote = mysqli_fetch_array($res_quote)): ?>
       <div class="streak grey lighten-3 mb-3">
         <div class="flex-center">
           <ul class="mb-0 list-unstyled">
@@ -62,12 +64,12 @@
           </ul>
         </div>
       </div>
-    <?php endforeach ?>
+    <?php endwhile; ?>
 
   <div class="container">
- 
+
   <div class="row wow fadeIn">
-  <?php foreach ($doctors as $doctor): ?> 
+  <?php while ($doctor = mysqli_fetch_array($res)): ?>
     <div class="col-lg-4 col-md-12 mb-4">
      <div class="card card-cascade wider">
 
@@ -102,10 +104,10 @@
 
    </div>
     </div>
-   <?php endforeach ?>
+  <?php endwhile; ?>
 </div>
 </div>
-    
+
     <?php include ('template/footer.html') ?>
 </body>
 
