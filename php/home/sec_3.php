@@ -1,4 +1,4 @@
-<div class="container-fluid #e3f2fd blue lighten-5 my-3 py-5">
+<div class="container-fluid #e3f2fd blue lighten-5 my-3 py-5" style="z-index: -1; position: relative">
     <div class="row px-md-5 ml-md-5">
         <div class="col-md-6 p-md-3">
             <h3 class="primaryColor pb-md-3">

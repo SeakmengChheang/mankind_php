@@ -1,19 +1,22 @@
 <?php
 require_once 'config.php';
 
-$sql = "SELECT * FROM blogs";
+$topic = htmlspecialchars($_GET['topic']);
+if ($topic < 1 || $topic > 5) {
+    header("location: /blog.php?topic=1");
+    exit;
+}
 
-$_GET['topic'] = $_GET['topic'] ?? 1;
-$topic = htmlspecialchars($_GET['topic'] == '' ? 1 : $_GET['topic']);
-if ($topic < 1 && $topic > 5)
-    die('error');
-
-$sql .= " WHERE ht_id = $topic";
 $res = mysqli_query($conn, "SELECT COUNT(*) as cnt FROM blogs WHERE ht_id = $topic");
-$cnt = mysqli_fetch_assoc($res)['cnt'];
+$pages = ceil(mysqli_fetch_assoc($res)['cnt'] / 9);
+$page_no = $_GET['pageno'];
 
-$page_no = $_GET['pageno'] ?? 1;
+if($page_no < 1 || $page_no > $pages) {
+    header("location: /blog.php?topic=$topic&pageno=1");
+    exit;
+}
 
+$sql = "SELECT * FROM blogs WHERE ht_id = $topic";
 $from = $page_no * 9 - 8;
 $sql .= " LIMIT $from, 9;";
 
@@ -25,8 +28,8 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 <html lang="en">
 <head>
     <?php
-    define('TITLE', 'Blog');
-    include('template/header.php');
+        define('TITLE', 'Blog');
+        include('template/header.php');
     ?>
     <style>
         img.img-fluid {
@@ -119,12 +122,11 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
         </li>
 
         <?php 
-            $pages = ceil($cnt / 9);
             if($page_no < 3) {
                 $from = 1;
                 $to = 5;
             } elseif($page_no > $pages - 2) {
-                $from = $pages - 5;
+                $from = $pages - 4;
                 $to = $pages;
             } else {
                 $from = $page_no - 2;
@@ -151,11 +153,11 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 </nav>
 
 <script>
-    var curr_page = "<?php echo htmlspecialchars($_GET['pageno'] ?? 1) ?>";
+    var curr_page = "<?php echo $page_no ?>";
     var a = document.getElementById('page_' + curr_page);
     a.classList.add("active");
 
-    var curr_topic = "<?php echo htmlspecialchars($_GET['topic'] ?? 1) ?>";
+    var curr_topic = "<?php echo $topic ?>";
     a = document.getElementById('topic_' + curr_topic);
     a.classList.add("active");
     document.getElementById('header').textContent = a.textContent;

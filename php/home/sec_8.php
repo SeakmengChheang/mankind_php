@@ -29,7 +29,7 @@
         </div>
 
         <div class="col-md-5">
-            <?php include 'php/contact_us/contact_us_form.php'; ?>
+            <?php include 'php/forms/feedback.php'; ?>
         </div>
 
     </div>

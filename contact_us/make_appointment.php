@@ -13,9 +13,6 @@
         .bg-image {
             background-image: url('/img/contact_us_bg.png');
         }
-        .picker__frame {
-            top: 20% !important;
-        }
     </style>
 </head>
 <body>
@@ -26,9 +23,7 @@
 
         <div class="container-fluid bg-content">
             <div class="col-md-5 m-auto py-5">
-                
-
-                <?php include '../php/make_appointment/make_appointment_form.php'; ?>
+                <?php include '../php/forms/make_appointment.php'; ?>
             </div>
         </div>
     </div>
