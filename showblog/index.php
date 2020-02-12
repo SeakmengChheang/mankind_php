@@ -10,15 +10,14 @@
            if($_GET['name'] == 1){
            
             $id = htmlspecialchars($_GET['id']);
-            $sql = "SELECT *FROM blogs WHERE id = $id";
+            $sql = "SELECT * FROM blogs WHERE id = $id";
             $res = mysqli_query($conn, $sql);
             $blog = mysqli_fetch_assoc($res);
-            echo 'helo';
            }
            else if ($_GET['name'] == 2)
             {
             $id = htmlspecialchars($_GET['id']);
-            $sql = "SELECT *FROM news WHERE id = $id";
+            $sql = "SELECT * FROM news WHERE id = $id";
             $res = mysqli_query($conn, $sql);
             $blog = mysqli_fetch_assoc($res);
            }

@@ -79,7 +79,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                             <div class="view overlay hm-white-slight rounded z-depth-2 mb-4 img-hover-zoom">
                                 <img src="<?php echo 'img/blog/' . $food['photo_url']; ?>" class="img-fluid"
                                 alt="">
-                                <a>
+                                <a href="/showblog?id=<?php echo $food['id'] ?>&name=1">
                                     <div class="mask"></div>
                                 </a>
                             </div>
