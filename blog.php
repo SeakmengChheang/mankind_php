@@ -9,7 +9,7 @@ if ($topic < 1 || $topic > 5) {
 
 $res = mysqli_query($conn, "SELECT COUNT(*) as cnt FROM blogs WHERE ht_id = $topic");
 $pages = ceil(mysqli_fetch_assoc($res)['cnt'] / 9);
-$page_no = $_GET['pageno'];
+$page_no = $_GET['pageno'] ?? 1;
 
 if($page_no < 1 || $page_no > $pages) {
     header("location: /blog.php?topic=$topic&pageno=1");
