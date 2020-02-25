@@ -29,12 +29,12 @@
 </style>
 </head>
 <div class="container">
-  <h2 class="my-5">New and Event</h2>
+  <h2 class="my-5">News and Events</h2>
 <div class="row wow fadeIn">
 <!-- Card Narrower -->
      
      <?php foreach($news as $new): ?>
-      <div class="col-lg-4 col-md-12 mb-4">
+      <div class="col-lg-4 col-md-6 mb-4">
         
         <div class="card card-cascade narrower">
        
