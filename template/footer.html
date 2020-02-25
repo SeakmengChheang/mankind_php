@@ -155,10 +155,9 @@
     // Material Select Initialization
     $(document).ready(function () {
         $('.mdb-select').materialSelect();
+        // Data Picker Initialization
+        $('.datepicker').pickadate();
     });
-
-    // Data Picker Initialization
-    $('.datepicker').pickadate();
 
     /* init Jarallax */
     jarallax(document.querySelectorAll('.jarallax'));
@@ -171,5 +170,10 @@
     AOS.init({
         duration: 1000,
         delay: 100,
+        once: true
     });
+
+    // $(document).ready(function() {
+    //     $("[alt='www.000webhost.com']").remove();
+    // });
 </script>

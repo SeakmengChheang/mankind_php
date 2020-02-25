@@ -8,14 +8,13 @@
         include ('../template/header.php');
     ?>
 
-    <link rel="stylesheet" href="css/form_with_background.css">
+    <link rel="stylesheet" href="/css/form_with_background.css">
     <style>
         .bg-image {
             background-image: url('../img/login_bg.png');
             height: 550px;
         }
     </style>
-    
 </head>
 <body>
     <?php include ('../template/navbar.html')?>
@@ -26,7 +25,7 @@
         <div class="container-fluid bg-content justify-content-center">
             <div class="col-md-5 m-auto py-5">
                 <?php 
-                    include ('../php/login/form.php');
+                    include ('../php/forms/login.php');
                 ?>
             </div>
         </div>

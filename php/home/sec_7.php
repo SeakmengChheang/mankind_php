@@ -25,7 +25,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
 			<?php foreach ($foods as $food) : ?>
 
                 <!-- Card -->
-                <div class="card weather-card col-md-3 my-3"  data-aos="flip-right">
+                <div class="card weather-card col-md-3 my-3" data-aos="flip-right">
 
                     <!-- Card content -->
                     <div class="card-body pb-3">
@@ -34,7 +34,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                             <div class="view overlay hm-white-slight rounded z-depth-2 mb-4 img-hover-zoom">
                                 <img src="<?php echo 'img/blog/' . $food['photo_url']; ?>" class="img-fluid"
                                      alt="">
-                                <a>
+                                <a href="/showblog?id=<?php echo $food['id'] ?>&name=1">
                                     <div class="mask"></div>
                                 </a>
                             </div>
@@ -50,21 +50,7 @@ $foods = mysqli_fetch_all($res, MYSQLI_ASSOC);
                             <strong><?php echo $food['title'] ?></strong>
                         </h4>
 
-                        <div class="collapse-content">
-
-                            <div class="collapse" id="collapse_<?php echo $food['id'] ?>">
-
-                                <p class="grey-text"><?php echo $food['body']; ?></p>
-
-                            </div>
-
-                            <hr class="">
-
-                            <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 deep-purple-text collapsed"
-                               data-toggle="collapse" href="#collapse_<?php echo $food['id'] ?>" aria-expanded="false"
-                               aria-controls="collapseExample1"></a>
-
-                        </div>
+                        <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $food['id'] ?>&name=1">Read more</a>
 
                     </div>
 

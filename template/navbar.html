@@ -32,7 +32,7 @@
         height: 75px;
     }
 </style>
-<div class="navbar-menu contact-nav container-fluid border-bottom px-5 py-2">
+<div class="navbar-menu contact-nav container-fluid border-bottom px-5 py-2" style="z-index: 9999;">
     <div class="row justify-content-between">
         <div class="col-md-2 border-right">
             <i class="fas fa-map-marker-alt"></i>
@@ -144,11 +144,7 @@
             </li>
 
             <li class="nav-item">
-                <form action="/login">
-                    <button type="submit" class="btn blue-gradient btn-round">
-                        Login
-                    </button>
-                </form>
+                <a href="/login" class="btn blue-gradient btn-round">Login</a>
             </li>
 
         </ul>

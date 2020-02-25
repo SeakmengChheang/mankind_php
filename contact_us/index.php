@@ -8,7 +8,7 @@
         include ROOT_PATH . '/template/header.php';
     ?>
 
-    <link rel="stylesheet" href="css/form_with_background.css">
+    <link rel="stylesheet" href="/css/form_with_background.css">
     <style>
         .bg-image {
             background-image: url('../img/contact_us_bg.png');
@@ -23,7 +23,7 @@
 
         <div class="container-fluid bg-content">
             <div class="col-md-5 m-auto py-5">
-                <?php include ROOT_PATH . '/php/contact_us/contact_us_form.php'; ?>
+                <?php include ROOT_PATH . '/php/forms/feedback.php'; ?>
             </div>
         </div>
     </div>
