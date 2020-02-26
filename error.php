@@ -7,7 +7,7 @@
   <style media="screen">
   *{
   transition: all 0.6s;
-}
+   }
 
 html {
   height: 100%;

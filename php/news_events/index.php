@@ -42,7 +42,7 @@
         <div class="view view-cascade overlay img-hover-zoom">
             <img class="card-img-top" src="<?php echo 'img/news/'. $new['photo_url'] ?>"
             alt="Card image cap">
-            <a>
+            <a href="/showblog?id=<?php echo $new['id'] ?>&name=2">
             <div class="mask rgba-white-slight"></div>
             </a>
         </div>
