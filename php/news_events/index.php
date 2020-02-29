@@ -1,8 +1,8 @@
-<?php 
+<?php
      require_once('config.php');
      $sql = "SELECT * FROM news";
      $res = mysqli_query($conn, $sql);
-     $news = mysqli_fetch_all($res, MYSQLI_ASSOC);
+
  ?>
 <head>
 <style>
@@ -16,7 +16,7 @@
       object-position: top;
       object-fit: cover;
       text-align: center;
-      
+
     }
     .des{
     overflow: hidden;
@@ -32,17 +32,17 @@
   <h2 class="my-5">News and Events</h2>
 <div class="row wow fadeIn">
 <!-- Card Narrower -->
-     
-     <?php foreach($news as $new): ?>
-      <div class="col-lg-4 col-md-6 mb-4">
-        
+
+     <?php while ($new = mysqli_fetch_array($res)) : ?>
+      <div class="col-lg-4 col-md-12 mb-4">
+
         <div class="card card-cascade narrower">
-       
+
         <!-- Card image -->
         <div class="view view-cascade overlay img-hover-zoom">
             <img class="card-img-top" src="<?php echo 'img/news/'. $new['photo_url'] ?>"
             alt="Card image cap">
-            <a>
+            <a href="/showblog?id=<?php echo $new['id'] ?>&name=2">
             <div class="mask rgba-white-slight"></div>
             </a>
         </div>
@@ -60,6 +60,6 @@
         </div>
         <!-- Card Narrower -->
    </div>
-   <?php endforeach ?>
+ <?php endwhile; ?>
 </div>
 </div>

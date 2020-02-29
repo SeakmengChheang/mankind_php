@@ -43,16 +43,17 @@
 <?php include '../template/navbar.html' ?>
 <div class="showblog">
     <div class="container my-4">
-        <div class="content-blog">
-            <div class="my-5"><h1><?php echo $blog['title'] ?></h1></div>
-            <div class="view overlay">
-                <img src="
+       <div class="content-blog">
+        <div class="my-5"><h1><?php echo $blog['title'] ?></h1></div>
+        <div class="view overlay">
+            <img src="
             <?php
-                if ($_GET['name'] == 1)
-                    echo '../img/blog/' . $blog['photo_url'];
-                else if ($_GET['name'] == 2)
-                    echo '../img/news/' . $blog['photo_url'];
-                ?>
+
+            if($_GET['name'] == 1)
+               echo '../img/blog/' . $blog['photo_url'];
+            else if($_GET['name'] == 2)
+               echo '../img/news/' . $blog['photo_url'];
+            ?>
             " class="img-fluid"
                      alt="">
             </div>

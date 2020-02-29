@@ -38,7 +38,7 @@
                 </li>
             </ul>
         </div>
-    
+
         <div class='col-12'>
             <div class="tab-content">
                 <div class="tab-pane" id="message">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
     <?php include ('template/footer.html') ?>

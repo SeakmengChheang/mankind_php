@@ -4,7 +4,8 @@ require_once 'config.php';
 $sql = 'SELECT * FROM doctors LIMIT 9;';
 
 $res = mysqli_query($conn, $sql);
-$doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
+
+$i = 0;
 ?>
 
 <style>
@@ -50,44 +51,47 @@ $doctors = mysqli_fetch_all($res, MYSQLI_ASSOC);
             <!--Slides-->
             <div class="carousel-inner" role="listbox">
 
-                <?php for ($i = 0; $i < 9; $i++) : ?>
-                    <?php if ($i % 3 == 0) echo "<div class=\"carousel-item row\" id=\"{$i}\">"; ?>
-                    <div class="card card-cascade wider col-md-4 my-3 center">
 
-                        <!-- Card image -->
-                        <div class="doctor_img">
-                            <div class="view view-cascade overlay img-hover-zoom">
-                                <img class="card-img-top"
-                                     src="<?php echo 'img/doctors/' . $doctors[$i]['photo_url']; ?>"
-                                     alt="Card image cap">
-                                <a href="#!">
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-                        </div>
 
-                        <!-- Card content -->
-                        <div class="card-body card-body-cascade text-center">
+                  <?php for ($i = 0; $i < 9; $i++) : ?>
+                   <?php $doctors = mysqli_fetch_array($res) ?>
+                  <?php if ($i % 3 == 0) echo "<div class=\"carousel-item row\" id=\"{$i}\">"; ?>
+                  <div class="card card-cascade wider col-md-4 my-3 center">
+                    
 
-                            <!-- Title -->
-                            <h4 class="card-title"><strong><?php echo $doctors[$i]['full_name'] ?></strong></h4>
-                            <!-- Subtitle -->
-                            <h5 class="blue-text pb-2"><strong><?php echo $doctors[$i]['email'] ?></strong></h5>
-                            <!-- Text -->
-                            <p class="card-text desc"><?php echo $doctors[$i]['description'] ?></p>
+                      <div class="doctor_img">
+                          <div class="view view-cascade overlay img-hover-zoom">
+                              <img class="card-img-top"
+                                   src="<?php echo 'img/doctors/' . $doctors['photo_url']; ?>"
+                                   alt="Card image cap">
+                              <a href="#!">
+                                  <div class="mask rgba-white-slight"></div>
+                              </a>
+                          </div>
+                      </div>
 
-                            <!-- Linkedin -->
-                            <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
-                            <!-- Twitter -->
-                            <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
-                            <!-- Dribbble -->
-                            <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
 
-                        </div>
-                    </div>
-                    <?php if ($i % 3 == 2) echo "</div>"; ?>
+                          <!-- Title -->
+                          <h4 class="card-title"><strong><?php echo $doctors['full_name'] ?></strong></h4>
+                          <!-- Subtitle -->
+                          <h5 class="blue-text pb-2"><strong><?php echo $doctors['email'] ?></strong></h5>
+                          <!-- Text -->
+                          <p class="card-text desc"><?php echo $doctors['description'] ?></p>
 
-                <?php endfor; ?>
+                          <!-- Linkedin -->
+                          <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+                          <!-- Twitter -->
+                          <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+                          <!-- Dribbble -->
+                          <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+
+                      </div>
+                  </div>
+
+                  <?php if ($i % 3 == 2) echo "</div>"; ?>
+           <?php endfor; ?>
 
             </div>
             <!--/.First slide-->
