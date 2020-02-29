@@ -50,7 +50,6 @@ $res = mysqli_query($conn, $sql);
                             <strong><?php echo $food['title'] ?></strong>
                         </h4>
 
-<<<<<<< HEAD
                         <div>
 
                             <div class="collapse" id="collapse_<?php echo $food['id'] ?>">
@@ -64,9 +63,6 @@ $res = mysqli_query($conn, $sql);
                             <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $food['id'] ?>&name=1">Read more</a>
 
                         </div>
-=======
-                        <a class="btn btn-info btn-rounded btn-md change-btn" href="/showblog?id=<?php echo $food['id'] ?>&name=1">Read more</a>
->>>>>>> de2e671175f119aaf96ab2aa923425a99c3c775d
 
                     </div>
 
