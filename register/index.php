@@ -21,7 +21,7 @@
 
         <div class="container-fluid bg-content">
             <div class="col-md-5 m-auto py-5">
-                <?php include '../php/register/form.php'; ?>
+                <?php include '../php/forms/register.php'; ?>
             </div>
         </div>
     </div>

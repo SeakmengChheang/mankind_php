@@ -1,55 +1,37 @@
 <?php require_once('../config.php'); ?>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <?php
         define('TITLE', 'Article');
         include('../template/header.php');
-        if(isset($_GET['id']))
-        {
-          if(isset($_GET['name'])){
-           $_GET['name'] = htmlspecialchars($_GET['name'] == '' ? 1 : $_GET['name']);
-           $_GET['name']=htmlspecialchars($_GET['name'] > 2 ? 1 : $_GET['name']);
-           $_GET['name']=htmlspecialchars($_GET['name'] < 1 ? 1 : $_GET['name']);
-           if($_GET['name'] == 1){
-            $id = htmlspecialchars($_GET['id']);
-            $sql = "SELECT * FROM blogs WHERE id = $id";
-            $res = mysqli_query($conn, $sql);
-            $blog = mysqli_fetch_assoc($res);
-           }
-           else if ($_GET['name'] == 2)
-            {
-            $id = htmlspecialchars($_GET['id']);
-            $sql = "SELECT * FROM news WHERE id = $id";
-            $res = mysqli_query($conn, $sql);
-            $blog = mysqli_fetch_assoc($res);
-           }
-         }
-         else {
-           http_response_code(404);
-           header("Location: error.php");
-           die();
-         }
-
+        if (isset($_GET['id'])) {
+            if ($_GET['name'] == 1) {
+                $id = htmlspecialchars($_GET['id']);
+                $sql = "SELECT * FROM blogs WHERE id = $id";
+            } else if ($_GET['name'] == 2) {
+                $id = htmlspecialchars($_GET['id']);
+                $sql = "SELECT * FROM news WHERE id = $id";
+            }
         }
-        else{
-        http_response_code(404);
-        header("Location: error.php");
-        die();
-        }
+        
+        $res = mysqli_query($conn, $sql);
+        $blog = mysqli_fetch_assoc($res);
     ?>
     <style>
-          .content-blog{
-              margin-left: 10%;
-              margin-right: 10%;
-          }
-          .img-fluid {
+        .content-blog {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .img-fluid {
             width: 100%;
             height: 350px;
             object-fit: cover;
         }
+
         @media only screen and (max-width: 850px) {
-            .img-fluid{
+            .img-fluid {
                 height: 250px;
             }
         }
@@ -73,9 +55,9 @@
                echo '../img/news/' . $blog['photo_url'];
             ?>
             " class="img-fluid"
-            alt="">
+                     alt="">
             </div>
-        <p class="py-5"><?php echo $blog['body'] ?></p>
+            <p class="py-5"><?php echo $blog['body'] ?></p>
         </div>
     </div>
 </div>

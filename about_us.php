@@ -1,3 +1,12 @@
+<?php 
+    $cats = ['message', 'vision', 'tech'];
+    $category = htmlspecialchars($_GET['catego'] ?? $cats[0]);
+    if(!in_array($category, $cats)) {
+        header("location: /about_us.php?catego=message");
+        exit;
+    }
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -46,26 +55,13 @@
 
     </div>
 
-
     <?php include ('template/footer.html') ?>
+
+    <script>
+        var tap = document.getElementById("<?php echo $category ?>");
+        tap.classList.add('active');
+        var nav = document.getElementById("<?php echo $category ?>" + "1");
+        nav.classList.add('active');
+    </script>
 </body>
 </html>
-<?php
-    if(isset($_GET['catego']))
-    {
-        $category = htmlspecialchars($_GET['catego']);
-        ?>
-        <script>
-                var tap = document.getElementById("<?php echo $category ?>");
-                tap.classList.add('active');
-                var nav = document.getElementById("<?php echo $category ?>" + "1");
-                nav.classList.add('active');
-        </script>
-        <?php
-    }
-    else{
-      http_response_code(404);
-      header("Location: error.php");
-      die();
-    }
-?>

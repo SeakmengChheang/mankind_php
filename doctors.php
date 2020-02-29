@@ -25,7 +25,7 @@
 
 <head>
   <?php
-  define('TITLE', 'Doctor');
+  define('TITLE', 'Doctors');
   include('template/header.php');
   ?>
 

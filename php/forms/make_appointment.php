@@ -1,4 +1,9 @@
-<!-- Card Narrower -->
+<style>
+    .picker__frame {
+        top: 20% !important;
+    }
+</style>
+
 
 <div class="card card-cascade narrower" data-aos="flip-left" data-aos-duration="1000">
 
@@ -36,7 +41,7 @@
             <label for="inputMDEx1">Choose your time</label>
         </div>
 
-        <div class="md-form">
+        <div class="md-form" style="position: relative">
             <select class="mdb-select md-form colorful-select dropdown-primary" id="doctor" searchable="Search here..">
                 <option value="" disabled selected>Choose your doctor</option>
                 <?php

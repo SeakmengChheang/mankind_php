@@ -29,7 +29,7 @@
 </style>
 </head>
 <div class="container">
-  <h2 class="my-5">New and Event</h2>
+  <h2 class="my-5">News and Events</h2>
 <div class="row wow fadeIn">
 <!-- Card Narrower -->
 
